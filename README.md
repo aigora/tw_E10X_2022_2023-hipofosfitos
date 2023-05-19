@@ -1,11 +1,19 @@
-# [Título del trabajo]
+# Electro Speed
 
-[Descripción breve del proyecto a realizar (2-3 frases).]
+Nuestro trabajo es una herramienta orientada 
+a la consulta y modificación de la base de datos 
+de generación de energía de las compañías electricas españolas.
 
 ## Integrantes del equipo
 
-[Nombres, apellidos, y usuario GitHub de los integrantes del equipo.]
+Lucía Carrasco Arcos : luciarcos
+José Jesús Benitez Valencia : jjbenitezz06
+Rodrigo Dos Santos Arenal : ricosuaveyatusabe
+Sergio Díaz Gegundez : serdige
 
 ## Objetivos del trabajo
 
-[Lista de los objetivos que se persiguen con el trabajo propuesto.]
+- Te permite la lectura de los datos.
+- Te posibilita la modificación de los datos.
+- Te calcula estadisticas.
+- Te proporciona que los datos se mezclen.
