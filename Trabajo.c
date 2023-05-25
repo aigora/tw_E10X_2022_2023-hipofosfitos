@@ -1542,7 +1542,9 @@ int main()
     printf("\n");
 
 	fclose(pf);
-	//JJ: "usuario elige los datos a utilizar"
+	
+	
+	
 	printf("Bienvenido al sistema.\n");
 	printf("Disponemos de los datos de generacion de:\n");
 	printf("1. Energia Hidraulica.\n");
@@ -1566,86 +1568,6 @@ int main()
 	scanf("%d", &tipo);
 	switch(tipo)
 	{
-		case 1:
-			printf("Has accedido a los datos de Energia Hidraulica.\n");
-			printf("Ahora elige si Modificar (1) o Editar (2) los datos:\n");
-			scanf("&d", &tipo);
-			if (tipo==1)
-			{
-				printf("Has elegido modificarlos. Ahora puedes: \n");
-				printf("1. Ordenar los datos. \n");
-				printf("2. Calcular estadisticas. \n");
-				printf("3. Alterar (escribir o eliminar) datos. \n");
-				printf("4. Mezclar los datos. \n");
-				scanf("%d", &tipo);
-				switch(tipo)
-				{
-					case 1:
-						printf("Has elegido ordenar los datos.\n");
-						break;
-					case 2:
-						printf("Has elegido calcular estadisticas.\n");
-						break;
-					case 3:
-						printf("Has elegido alterar datos.\n");
-						break;
-					case 4:
-						printf("Has elegido mezclar los datos.\n");
-						break;
-					default:
-						printf("Esa no es una opcion.\n");
-						break;
-				}
-			}
-			else if (tipo==2)
-			{
-				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
-		case 1:
-			printf("Has accedido a los datos de Energia Hidraulica.\n");
-			printf("Ahora elige si Modificar (1) o Editar (2) los datos:\n");
-			scanf("&d", &tipo);
-			if (tipo==1)
-			{
-				printf("Has elegido modificarlos. Ahora puedes: \n");
-				printf("1. Ordenar los datos. \n");
-				printf("2. Calcular estadisticas. \n");
-				printf("3. Alterar (escribir o eliminar) datos. \n");
-				printf("4. Mezclar los datos. \n");
-				scanf("%d", &tipo);
-				switch(tipo)
-				{
-					case 1:
-						printf("Has elegido ordenar los datos.\n");
-						break;
-					case 2:
-						printf("Has elegido calcular estadisticas.\n");
-						break;
-					case 3:
-						printf("Has elegido alterar datos.\n");
-						break;
-					case 4:
-						printf("Has elegido mezclar los datos.\n");
-						break;
-					default:
-						printf("Esa no es una opcion.\n");
-						break;
-				}
-			}
-			else if (tipo==2)
-			{
-				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
 		case 1:
 			printf("Has accedido a los datos de Energia Hidraulica.\n");
 			printf("Ahora elige si Modificar (1) o Editar (2) los datos:\n");
