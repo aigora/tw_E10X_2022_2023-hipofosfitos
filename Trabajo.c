@@ -1611,7 +1611,7 @@ int main()
 		case 2:
 			printf("Has accedido a los datos de Turbinacion Bombeo.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("&d", &tipo);
+			scanf("%d", &tipo);
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -1651,7 +1651,7 @@ int main()
 		case 3:
 			printf("Has accedido a los datos de Energia Nuclear.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("&d", &tipo);
+			scanf("%d", &tipo);
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -1691,7 +1691,7 @@ int main()
 		case 4:
 			printf("Has accedido a los datos de Carbon.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("&d", &tipo);
+			scanf("%d", &tipo);
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -1731,7 +1731,7 @@ int main()
 		case 5:
 			printf("Has accedido a los datos de Motores Diesel.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("&d", &tipo);
+			scanf("%d", &tipo);
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -1771,7 +1771,7 @@ int main()
 		case 6:
 			printf("Has accedido a los datos de Turbina de gas.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("&d", &tipo);
+			scanf("%d", &tipo);
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -1811,7 +1811,7 @@ int main()
 		case 7:
 			printf("Has accedido a los datos de Turbina de Vapor.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("&d", &tipo);
+			scanf("%d", &tipo);
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -1851,7 +1851,7 @@ int main()
 		case 8:
 			printf("Has accedido a los datos de Energia Hidroeolica.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("&d", &tipo);
+			scanf("%d", &tipo);
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -1891,7 +1891,7 @@ int main()
 			case 9:
 			printf("Has accedido a los datos de Energia Eolica.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("&d", &tipo);
+			scanf("%d", &tipo);
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -1931,7 +1931,7 @@ int main()
 		case 10:
 			printf("Has accedido a los datos de Solar Fotovoltaica.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("&d", &tipo);
+			scanf("%d", &tipo);
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -1971,7 +1971,7 @@ int main()
 		case 11:
 			printf("Has accedido a los datos de Solar Termica.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("&d", &tipo);
+			scanf("%d", &tipo);
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -2011,7 +2011,7 @@ int main()
 		case 12:
 			printf("Has accedido a los datos de Otras Renovables.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("&d", &tipo);
+			scanf("%d", &tipo);
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -2051,7 +2051,7 @@ int main()
 		case 13:
 			printf("Has accedido a los datos de Cogeneracion.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("&d", &tipo);
+			scanf("%d", &tipo);
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -2091,7 +2091,7 @@ int main()
 		case 14:
 			printf("Has accedido a los datos de Residuos no Renovables.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("&d", &tipo);
+			scanf("%d", &tipo);
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -2131,7 +2131,7 @@ int main()
 		case 15:
 			printf("Has accedido a los datos de Residuos Renovables.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("&d", &tipo);
+			scanf("%d", &tipo);
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
