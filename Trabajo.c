@@ -1,8 +1,22 @@
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
+#include <stdbool.h>
+
+//Prototipos de funciones
+
+void identificarse();
+
 
 int main()
 {
+    //El usuario se registra
+
+    identificarse();
+     
+
+    //Se abre el archivo, se escanea, se imprime y se cierra
+
 	FILE *pf;
 	pf = fopen ("/Users/luciarcoss/Desktop/generacion_por_tecnologias_21_22_puntos_simplificado.csv", "r");
 	
@@ -1544,7 +1558,8 @@ int main()
 	fclose(pf);
 	
 	
-	
+	//El usuario elige los datos a utilizar
+
 	printf("Bienvenido al sistema.\n");
 	printf("Disponemos de los datos de generacion de:\n");
 	printf("1. Energia Hidraulica.\n");
@@ -1571,7 +1586,7 @@ int main()
 		case 1:
 			printf("Has accedido a los datos de Energia Hidraulica.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("&d", &tipo);
+			scanf("%d", &tipo);
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -2213,6 +2228,42 @@ int main()
         			printf("Esa no es una opción");
        			 break;
     			 }
-			 }
+			     
 	return 0;
 }
+
+
+//Funciones:
+
+void identificarse()
+{
+    char nombre[50];
+    char contrasena[50];
+    bool identificado = false;
+
+    for (int i = 0; i < 10; i++)
+    {
+        printf("Ingrese su usuario:\n");
+        scanf("%s", nombre);
+
+        printf("Ingrese su contraseña:\n");
+        scanf("%s", contrasena);
+
+        if (strcmp(nombre, "Hipofosfito") == 0 && strcmp(contrasena, "12345") == 0)
+        {
+            printf("Identificación exitosa. ¡Bienvenido, %s!\n", nombre);
+            identificado = true;
+            break;
+        }
+        else
+        {
+            printf("Identificación fallida. Usuario o contraseña incorrectos. Dispones de %d intentos más para registrarte.\n", 9 - i);
+        }
+    }
+
+    if (!identificado)
+    {
+        printf("Agotaste todos tus intentos. Identificación fallida.\n");
+    }
+}
+
