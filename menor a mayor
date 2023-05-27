@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void selectionSort(int arr[], int n) {
+    int i, j, min_idx;
+
+    for (i = 0; i < n - 1; i++) {
+        min_idx = i;
+
+        for (j = i + 1; j < n; j++) {
+            if (arr[j] < arr[min_idx]) {
+                min_idx = j;
+            }
+        }
+
+        swap(&arr[i], &arr[min_idx]);
+    }
+}
+
+void printArray(int arr[], int n) {
+    int i;
+    for (i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int vector[23] = {9, 4, 7, 1, 6, 2, 8, 5, 3, 10, 15, 12, 14, 11, 13, 20, 17, 19, 16, 23, 22, 21, 18};
+    int size = sizeof(vector) / sizeof(vector[0]);
+
+    printf("Vector original:\n");
+    printArray(vector, size);
+
+    selectionSort(vector, size);
+
+    printf("Vector ordenado de menor a mayor:\n");
+    printArray(vector, size);
+
+    return 0;
+}
