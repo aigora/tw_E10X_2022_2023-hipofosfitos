@@ -1593,8 +1593,41 @@ int main()
 	{
        case 0:
             printf("Has accedido a los datos de Fechas.\n");
+            printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
+			scanf("%d", &tipo);
+            if (tipo==1)
+            {
+                printf("Has elegido modificarlos. Ahora puedes: \n");
+				printf("1. Ordenar los datos. \n");
+				printf("2. Calcular estadisticas. \n");
+				printf("3. Alterar (escribir o eliminar) datos. \n");
+				printf("4. Mezclar los datos. \n");
+				scanf("%d", &tipo);
 
-            char datofechas;
+                switch(tipo)
+				{
+					case 1:
+						printf("Has elegido ordenar los datos.\n");
+						break;
+					case 2:
+						printf("Has elegido calcular estadisticas.\n");
+						break;
+					case 3:
+						printf("Has elegido alterar datos.\n");
+						break;
+					case 4:
+						printf("Has elegido mezclar los datos.\n");
+						break;
+					default:
+						printf("Esa no es una opcion.\n");
+						break;
+				}
+            }
+            else if (tipo==2)
+			{
+				printf("Has elegido leerlos.\n");
+                printf("\n");
+                char datofechas;
                while (fscanf(pf, "%c", &datofechas) != EOF)
                {
                fscanf(pf,"%[^,]", chh);
@@ -1677,19 +1710,29 @@ int main()
                }
 
                printf("\n");
+			}
+			else 
+			{
+				printf("Error!\n");
+			}
+			break;
+        
 
-            printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
+		case 1:
+			printf("Has accedido a los datos de Energia Hidraulica.\n");
+			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
-            if (tipo==1)
-            {
-                printf("Has elegido modificarlos. Ahora puedes: \n");
+
+			if (tipo==1)
+			{
+				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
 				printf("3. Alterar (escribir o eliminar) datos. \n");
 				printf("4. Mezclar los datos. \n");
 				scanf("%d", &tipo);
 
-                switch(tipo)
+				switch(tipo)
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
@@ -1707,22 +1750,11 @@ int main()
 						printf("Esa no es una opcion.\n");
 						break;
 				}
-            }
-            else if (tipo==2)
+			}
+			else if (tipo==2)
 			{
 				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
-        
-
-		case 1:
-			printf("Has accedido a los datos de Energia Hidraulica.\n");
-
-            char datohidraulica;
+                char datohidraulica;
                while (fscanf(pf, "%c", &datohidraulica) != EOF)
                {
                 fscanf(pf,"%[^,]", hd);
@@ -1802,10 +1834,16 @@ int main()
                 fscanf(pf,"%d.%d", &bbu,&bbv);
                 printf("%d.%d",bbu,bbv);
                }
-
                printf("\n");
+			}
+			else 
+			{
+				printf("Error!\n");
+			}
+			break;
 
-			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
+		case 2:
+			printf("Has accedido a los datos de Turbinacion Bombeo.\n");            printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
 
 			if (tipo==1)
@@ -1839,17 +1877,7 @@ int main()
 			else if (tipo==2)
 			{
 				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
-
-		case 2:
-			printf("Has accedido a los datos de Turbinacion Bombeo.\n");
-			
-            char datoturbinabombeo;
+                char datoturbinabombeo;
                while (fscanf(pf, "%c", &datoturbinabombeo) != EOF)
                {
                 
@@ -1933,10 +1961,17 @@ int main()
                }
 
                printf("\n");
+			}
+			else 
+			{
+				printf("Error!\n");
+			}
+			break;
 
+		case 3:
+			printf("Has accedido a los datos de Energia Nuclear.\n");
             printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
-
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -1945,7 +1980,6 @@ int main()
 				printf("3. Alterar (escribir o eliminar) datos. \n");
 				printf("4. Mezclar los datos. \n");
 				scanf("%d", &tipo);
-
 				switch(tipo)
 				{
 					case 1:
@@ -1968,17 +2002,7 @@ int main()
 			else if (tipo==2)
 			{
 				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
-
-		case 3:
-			printf("Has accedido a los datos de Energia Nuclear.\n");
-
-             char datonuclear;
+                char datonuclear;
                while (fscanf(pf, "%c", &datonuclear) != EOF)
                {
                 fscanf(pf,"%[^,]", nclear);
@@ -2061,8 +2085,18 @@ int main()
 
                printf("\n");
 
+			}
+			else 
+			{
+				printf("Error!\n");
+			}
+			break;
+
+		case 4:
+			printf("Has accedido a los datos de Carbon.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
+
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -2093,15 +2127,6 @@ int main()
 			else if (tipo==2)
 			{
 				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
-
-		case 4:
-			printf("Has accedido a los datos de Carbon.\n");
 
             char datocarbon;
                while (fscanf(pf, "%c", &datocarbon) != EOF)
@@ -2186,10 +2211,17 @@ int main()
                }
 
                printf("\n");
+			}
+			else 
+			{
+				printf("Error!\n");
+			}
+			break;
 
+		case 5:
+			printf("Has accedido a los datos de Motores Diesel.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
-
 			if (tipo==1)
 			{
 				printf("Has elegido modificarlos. Ahora puedes: \n");
@@ -2220,17 +2252,7 @@ int main()
 			else if (tipo==2)
 			{
 				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
-
-		case 5:
-			printf("Has accedido a los datos de Motores Diesel.\n");
-
-             char datodiesel;
+                char datodiesel;
                while (fscanf(pf, "%c", &datodiesel) != EOF)
                {
                 fscanf(pf,"%[^,]", mtres);
@@ -2311,9 +2333,15 @@ int main()
                 printf("%d.%d",ffu,ffv);
 
                }
-
                printf("\n");
-
+			}
+			else 
+			{
+				printf("Error!\n");
+			}
+			break;
+		case 6:
+			printf("Has accedido a los datos de Turbina de gas.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
 			if (tipo==1)
@@ -2346,16 +2374,7 @@ int main()
 			else if (tipo==2)
 			{
 				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
-		case 6:
-			printf("Has accedido a los datos de Turbina de gas.\n");
-
-             char datoturbinagas;
+                char datoturbinagas;
                while (fscanf(pf, "%c", &datoturbinagas) != EOF)
                { 
                 fscanf(pf,"%[^,]", tgas);
@@ -2437,8 +2456,15 @@ int main()
                }
 
                printf("\n");
+			}
+			else 
+			{
+				printf("Error!\n");
+			}
+			break;
 
-
+		case 7:
+			printf("Has accedido a los datos de Turbina de Vapor.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
 			if (tipo==1)
@@ -2471,18 +2497,7 @@ int main()
 			else if (tipo==2)
 			{
 				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
-
-		case 7:
-			printf("Has accedido a los datos de Turbina de Vapor.\n");
-
-            
-            char datoturbinavapor;
+                char datoturbinavapor;
                while (fscanf(pf, "%c", &datoturbinavapor) != EOF)
                {
                 fscanf(pf,"%[^,]", vapor);
@@ -2562,9 +2577,16 @@ int main()
                 fscanf(pf,"%d.%d", &hhu,&hhv);
                 printf("%d.%d",hhu,hhv);
                }
-
                printf("\n");
+			}
+			else 
+			{
+				printf("Error!\n");
+			}
+			break;
 
+		case 8:
+			printf("Has accedido a los datos de Energia Hidroeolica.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
 			if (tipo==1)
@@ -2597,17 +2619,7 @@ int main()
 			else if (tipo==2)
 			{
 				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
-
-		case 8:
-			printf("Has accedido a los datos de Energia Hidroeolica.\n");
-
-            char datohidroeolica;
+                 char datohidroeolica;
                while (fscanf(pf, "%c", &datohidroeolica) != EOF)
                {
                 fscanf(pf,"%[^,]", hdeoli);
@@ -2689,7 +2701,15 @@ int main()
                }
 
                printf("\n");
+			}
+			else 
+			{
+				printf("Error!\n");
+			}
+			break;
 
+		case 9:
+			printf("Has accedido a los datos de Energia Eolica.\n");   
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
 			if (tipo==1)
@@ -2722,17 +2742,7 @@ int main()
 			else if (tipo==2)
 			{
 				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
 
-		case 9:
-			printf("Has accedido a los datos de Energia Eolica.\n");
-
-            
             char datoeolica;
                while (fscanf(pf, "%c", &datoeolica) != EOF)
                {
@@ -2816,6 +2826,15 @@ int main()
 
                printf("\n");
 
+			}
+			else 
+			{
+				printf("Error!\n");
+			}
+			break;
+
+		case 10:
+			printf("Has accedido a los datos de Solar Fotovoltaica.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
 			if (tipo==1)
@@ -2848,17 +2867,7 @@ int main()
 			else if (tipo==2)
 			{
 				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
-
-		case 10:
-			printf("Has accedido a los datos de Solar Fotovoltaica.\n");
-
-               char datofotovoltaica;
+                 char datofotovoltaica;
                while (fscanf(pf, "%c", &datofotovoltaica) != EOF)
                {
                 fscanf(pf,"%[^,]", solarft);
@@ -2941,8 +2950,16 @@ int main()
 
                printf("\n");
 
+			}
+			else 
+			{
+				printf("Error!\n");
+			}
+			break;
 
-			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
+		case 11:
+			printf("Has accedido a los datos de Solar Termica.\n");
+            printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
 			if (tipo==1)
 			{
@@ -2974,15 +2991,6 @@ int main()
 			else if (tipo==2)
 			{
 				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
-
-		case 11:
-			printf("Has accedido a los datos de Solar Termica.\n");
 
             char datotermica;
                while (fscanf(pf, "%c", &datotermica) != EOF)
@@ -3066,7 +3074,15 @@ int main()
                }
 
                printf("\n");
+			}
+			else 
+			{
+				printf("Error!\n");
+			}
+			break;
 
+		case 12:
+			printf("Has accedido a los datos de Otras Renovables.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
 			if (tipo==1)
@@ -3099,17 +3115,7 @@ int main()
 			else if (tipo==2)
 			{
 				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
-
-		case 12:
-			printf("Has accedido a los datos de Otras Renovables.\n");
-
-            char datootrasrenovables;
+                char datootrasrenovables;
                while (fscanf(pf, "%c", &datootrasrenovables) != EOF)
                {
                 fscanf(pf,"%[^,]", otras);
@@ -3191,7 +3197,15 @@ int main()
                }
 
                printf("\n");
+			}
+			else 
+			{
+				printf("Error!\n");
+			}
+			break;
 
+		case 13:
+			printf("Has accedido a los datos de Cogeneracion.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
 			if (tipo==1)
@@ -3224,17 +3238,7 @@ int main()
 			else if (tipo==2)
 			{
 				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
-
-		case 13:
-			printf("Has accedido a los datos de Cogeneracion.\n");
-
-            char datocogeneracion;
+                char datocogeneracion;
                while (fscanf(pf, "%c", &datocogeneracion) != EOF)
                {
                 fscanf(pf,"%[^,]", cogenera);
@@ -3316,7 +3320,15 @@ int main()
                }
 
                printf("\n");
+			}
+			else 
+			{
+				printf("Error!\n");
+			}
+			break;
 
+		case 14:
+			printf("Has accedido a los datos de Residuos no Renovables.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
 			if (tipo==1)
@@ -3349,17 +3361,7 @@ int main()
 			else if (tipo==2)
 			{
 				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
-
-		case 14:
-			printf("Has accedido a los datos de Residuos no Renovables.\n");
-
-            char datonorenovables;
+                char datonorenovables;
                while (fscanf(pf, "%c", &datonorenovables) != EOF)
                {
                 fscanf(pf,"%[^ ]", residuosno);
@@ -3446,7 +3448,15 @@ int main()
                }
 
                printf("\n");
+			}
+			else 
+			{
+				printf("Error!\n");
+			}
+			break;
 
+		case 15:
+			printf("Has accedido a los datos de Residuos Renovables.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
 			if (tipo==1)
@@ -3479,17 +3489,8 @@ int main()
 			else if (tipo==2)
 			{
 				printf("Has elegido leerlos.\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
 
-		case 15:
-			printf("Has accedido a los datos de Residuos Renovables.\n");
-
-            char datosirenovables;
+               char datosirenovables;
                while (fscanf(pf, "%c", &datosirenovables) != EOF)
                {
                 fscanf(pf,"%[^,]", residuossi);
@@ -3569,41 +3570,7 @@ int main()
                 fscanf(pf,"%d.%d", &ppu,&ppv);
                 printf("%d.%d",ppu,ppv);
                }
-
                printf("\n");
-
-			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("%d", &tipo);
-			if (tipo==1)
-			{
-				printf("Has elegido modificarlos. Ahora puedes: \n");
-				printf("1. Ordenar los datos. \n");
-				printf("2. Calcular estadisticas. \n");
-				printf("3. Alterar (escribir o eliminar) datos. \n");
-				printf("4. Mezclar los datos. \n");
-				scanf("%d", &tipo);
-				switch(tipo)
-				{
-					case 1:
-						printf("Has elegido ordenar los datos.\n");
-						break;
-					case 2:
-						printf("Has elegido calcular estadisticas.\n");
-						break;
-					case 3:
-						printf("Has elegido alterar datos.\n");
-						break;
-					case 4:
-						printf("Has elegido mezclar los datos.\n");
-						break;
-					default:
-						printf("Esa no es una opcion.\n");
-						break;
-				}
-			}
-			else if (tipo==2)
-			{
-				printf("Has elegido leerlos.\n");
 			}
 			else 
 			{
@@ -3613,10 +3580,42 @@ int main()
 
 		 case 16:
         		printf("Has accedido a los datos de Generacion Total.\n");
-
+        		printf("Ahora elige si Modificar (1) o Editar (2) los datos: \n");
+        		scanf("%i", &tipo);
+       			if (tipo==1)
+       			{
+           			printf("Has elegido modificarlos.\n");
+            			printf("Ahora puedes:\n");
+            			printf("1. Ordenar los datos.\n");
+            			printf("2. Calcular estadísticas.\n");
+            			printf("3. Alterar (escribir o eliminar) datos.\n");
+            			printf("4. Mezclar los datos.\n");
+            			scanf("%i", &tipo);
+            			switch (tipo)
+            			{
+                			case 1:
+                			printf("Has elegido ordenar los datos.\n");
+                			break;
+            				case 2:
+                			printf("Has elegido calcular estadisticas.\n");
+                			break;
+            				case 3:
+                			printf("Has elegido alterar datos.\n");
+                			break;
+            				case 4:
+                			printf("Has elegido mezclar los datos.\n");
+                			break;
+            				default:
+                			printf("Esa no es una opcion.\n");
+                			break;
+            			}
+       			 }
+        		 else if (tipo==2)
+        		 {
+                printf("Has elegido leerlos.\n");
                 char datogeneraciontotal;
-               while (fscanf(pf, "%c", &datogeneraciontotal) != EOF)
-               {
+                while (fscanf(pf, "%c", &datogeneraciontotal) != EOF)
+                {
                 fscanf(pf,"%[^,]", genera);
 	            printf("%s,", genera);
 
@@ -3693,43 +3692,8 @@ int main()
 
                 fscanf(pf,"%d.%d", &qqu,&qqv);
                 printf("%d.%d",qqu,qqv);
-               }
-
+                }
                printf("\n");
-
-        		printf("Ahora elige si Modificar (1) o Editar (2) los datos: \n");
-        		scanf("%i", &tipo);
-       			if (tipo==1)
-       			{
-           			printf("Has elegido modificarlos.\n");
-            			printf("Ahora puedes:\n");
-            			printf("1. Ordenar los datos.\n");
-            			printf("2. Calcular estadísticas.\n");
-            			printf("3. Alterar (escribir o eliminar) datos.\n");
-            			printf("4. Mezclar los datos.\n");
-            			scanf("%i", &tipo);
-            			switch (tipo)
-            			{
-                			case 1:
-                			printf("Has elegido ordenar los datos.\n");
-                			break;
-            				case 2:
-                			printf("Has elegido calcular estadisticas.\n");
-                			break;
-            				case 3:
-                			printf("Has elegido alterar datos.\n");
-                			break;
-            				case 4:
-                			printf("Has elegido mezclar los datos.\n");
-                			break;
-            				default:
-                			printf("Esa no es una opcion.\n");
-                			break;
-            			}
-       			 }
-        		 else if (tipo==2)
-        		 {
-            			printf("Has elegido leerlos.\n");
         		 }
         		 else 
         		 {
@@ -3740,7 +3704,7 @@ int main()
         			printf("Esa no es una opción");
        			 break;
     			 }
-                 
+
 	fclose(pf);	  
 
 	return 0;
