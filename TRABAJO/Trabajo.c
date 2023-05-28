@@ -2,6 +2,7 @@
 #include <math.h>
 #include <string.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 //Prototipos de funciones
 
@@ -9,6 +10,7 @@ void identificarse();
 float calcularMedia(float arr[], float n);
 float calcularModa(float arr[], float n); 
 float calcularVarianza(float arr[], float n); 
+
 
 
 
@@ -1634,7 +1636,10 @@ int main()
 						printf("Has elegido ordenar los datos.\n");
 						break;
 					case 2:
-						printf("Has elegido calcular estadisticas.\n");
+						
+                    while (1) 
+                    {
+                        printf("Has elegido calcular estadisticas.\n");
                         float hidraulica[24] = {4517.602492, 3715.416012, 2745.019022, 2159.483245, 2182.252545, 2209.464623, 1883.260803, 1396.698883, 1023.215446, 1199.445532, 2536.803672, 2085.857451, 1174.970169, 1764.806206, 1782.053848, 1922.302375, 1190.985484, 1043.519078, 972.977692, 1153.775681, 717.70239, 1309.281418, 2744.808065};
                         int n = sizeof(hidraulica) / sizeof(hidraulica[0]);
                         float media = calcularMedia(hidraulica, n);
@@ -1644,8 +1649,7 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
-
-						break;
+                        break;
 					case 3:
 						printf("Has elegido alterar datos.\n");
 						break;
@@ -1655,8 +1659,11 @@ int main()
 					default:
 						printf("Esa no es una opcion.\n");
 						break;
-				}
-			}
+				
+			       }
+                }
+            }
+                
 			else if (tipo==2)
 			{
 				printf("Has elegido leerlos.\n");
@@ -1747,6 +1754,7 @@ int main()
 				printf("Error!\n");
 			}
 			break;
+        
 
 		case 2:
 			printf("Has accedido a los datos de Turbinacion Bombeo.\n");            
@@ -3893,8 +3901,14 @@ int main()
         			printf("Esa no es una opción");
        			 break;
     			 }
+    
 
-	fclose(pf);	  
+
+
+            
+	fclose(pf);	
+      
+
 
 	return 0;
 }
@@ -3991,3 +4005,4 @@ float calcularVarianza(float arr[], float n)
 
     return sum / n;
 }
+

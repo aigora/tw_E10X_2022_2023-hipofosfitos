@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+void identificarse();
+
+int main()
+{
+    identificarse();
+    return 0;
+}
+
+void identificarse()
+{
+    char nombre[50];
+    char contrasena[50];
+    bool identificado = false;
+
+    for (int i = 0; i < 10; i++)
+    {
+        printf("Ingrese su usuario:\n");
+        scanf("%s", nombre);
+
+        printf("Ingrese su contraseña:\n");
+        scanf("%s", contrasena);
+
+        if (strcmp(nombre, "Hipofosfito") == 0 && strcmp(contrasena, "12345") == 0)
+        {
+            printf("Identificación exitosa. ¡Bienvenido, %s!\n", nombre);
+            identificado = true;
+            break;
+        }
+        else
+        {
+            printf("Identificación fallida. Usuario o contraseña incorrectos. Dispones de %d intentos más para registrarte.\n", 9 - i);
+        }
+    }
+
+    if (!identificado)
+    {
+        printf("Agotaste todos tus intentos. Identificación fallida.\n");
+    }
+}
+
