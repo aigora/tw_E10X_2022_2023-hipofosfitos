@@ -13,7 +13,7 @@ José Jesús Benitez Valencia || jjbenitezz06
 
 Rodrigo Dos Santos Arenal   || ricosuaveyatusabe
 
-Sergio Díaz Gegundez        || serdige
+Sergio Díaz Gegundez        || serdige 
 
 ## Objetivos del trabajo
 
