@@ -4160,7 +4160,7 @@ void selec(float v[], float n) {
              }
          }
 
-         camb(&v[i], &v[min_idx]);
+         cambiar(&v[i], &v[min_idx]);
      }
  }
 
