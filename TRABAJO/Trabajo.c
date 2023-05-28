@@ -12,6 +12,7 @@ float calcularModa(float arr[], float n);
 float calcularVarianza(float arr[], float n); 
 void cambiar(float *a, float *b);
 void mezclar(float vec[], float dim);
+void selec(float v[], float n);
 
 
 
@@ -4134,6 +4135,21 @@ void cambiar(float *a, float *b) {
      for (int i = dim - 1; i > 0; i--) {
          int j = rand() % (i + 1);
          cambiar(&vec[i], &vec[j]);
+     }
+ }
+void selec(float v[], float n) {
+     int i, j, min_idx;
+
+     for (i = 0; i < n - 1; i++) {
+         min_idx = i;
+
+         for (j = i + 1; j < n; j++) {
+             if (v[j] < v[min_idx]) {
+                 min_idx = j;
+             }
+         }
+
+         camb(&v[i], &v[min_idx]);
      }
  }
 
