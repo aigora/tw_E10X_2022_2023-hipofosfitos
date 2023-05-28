@@ -56,7 +56,8 @@ int main() {
     float varianza = calcularVarianza(vector, size);
 
     printf("Vector:\n");
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++) 
+    {
         printf("%d ", vector[i]);
     }
     printf("\n\n");

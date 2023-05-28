@@ -6,6 +6,10 @@
 //Prototipos de funciones
 
 void identificarse();
+float calcularMedia(float arr[], float n);
+float calcularModa(float arr[], float n); 
+float calcularVarianza(float arr[], float n); 
+
 
 
 int main()
@@ -1556,16 +1560,33 @@ int main()
 
     printf("\n");
 
-	//fclose(pf);
 
-	
+	//Almacenamos los datos del fichero en vector, cada vector es un tipo de energía
+
+    float hidraulica[24]={4517.602492,3715.416012,2745.019022,2159.483245,2182.252545,2209.464623,1883.260803,1396.698883,1023.215446,1199.445532,2536.803672,2085.857451,1174.970169,1764.806206,1782.053848,1922.302375,1190.985484,1043.519078,972.977692,1153.775681,717.70239,1309.281418,2744.808065};
+    float turbbomb[24]={320.531389,401.293218,330.794555,153.67968,238.708927,105.706304,115.895307,159.688964,118.198104,232.112394,202.806598,269.908819,215.637741,285.079947,273.848152,336.712619,299.880038,270.92393,216.617594,339.372152,304.810326,385.661431,361.663867,485.359059};
+    float nuclear[24]={5199.740516,4358.515107,4833.065002,4197.33293,4373.250552,3684.377943,5119.328941,5151.337803,4890.618221,4748.364457,3562.2548073,3922.833452,5048.424951,4771.058269,4766.690052,4414.715447,4066.355361,4459.459166,5073.152497,5122.046929,4847.367123,4021.440771,4231.577244,5161.212451};
+    float carbon[24]={557.975979,176.266719,242.138946,270.100026,331.931113,473.579232,311.10233,319.182668,477.087202,527.419848,576.437576,719.926373,709.963219,568.629528,705.226125,691.004601,527.154558,833.22046,882.232497,819.592534,632.066719,380.972026,321.469754,693.672984};
+    float motordiesel[24]={203.759973,160.418085,173.283976,187.547789,178.362299,206.220592,239.576815,258.860338,256.964192,233.570565,203.062243,215.797238,210.125165,185.575526,207.451789,205.100257,215.84438,224.847296,242.769547,245.673515,216.066723,202.310552,192.196854,200.241967};
+    float turbgas[24]={28.766271,18.02613,27.904377,24.553476,24.916217,34.119217,40.565981,47.885346,71.402214,46.314807,30.058985,29.066882,34.446764,34.328002,38.861714,34.57236,42.307777,47.734021,79.729885,85.527648,84.422615,79.275334,47.409887,48.856536};
+    float turbvapor[24]={116.282053,104.960847,100.7582590,70.652976,62.41677,33.486942,66.134210,99.644190,113.210213,112.484255,115.109023,112.916219,117.429802,102.630663,114.410944,103.636366,86.849653,60.625902,73.213599,102.417012,110.953990,118.59882,93.771169,122.696654};
+    float ciclocomb[24]={2729.183017,1544.065785,2151.091661,3384.471579,2444.871606,3658.878948,3718.134418,4047.368387,4943.197265,4407.05637,6317.636788,5154.143508,5898.394445,4671.261013,3873.203200,3146.865903,3713.639484,6478.937315,8460.459144,8082.027681,7704.900731,7066.859015,4672.406377,4368.592847};
+    float hidroeolica[24]={0.99317,1.226483,1.921443,0.835908,3.227077,3.002042,3.578217,2.663478,1.429314,1.853454,1.139789,1.227861,1.110916,1.482045,2.126322,1.752528,1.917174,2.44956,3.562943,3.517675,2.075094,1.350072,1.169409,0.367104};
+    float eolica[24]={7101.249123,6294.982856,5606.818805,4095.800569,4785.695033,3684.170619,4284.090513,3747.238495,3234.274816,4359.563921,6421.739529,6910.032613,5414.777160,4712.962772,6528.440466,5655.806361,4687.64999,3807.180833,4566.002106,4258.846638,4191.189274,5099.919318,6682.534764,5570.282592};
+    float solarfoto[24]={848.403074,973.686902,1688.757265,1665.571492,2388.831852,2325.571729,2617.534056,2395.8309,1927.916611,1777.274811,1347.957356,1023.70725,1569.291683,1693.011465,1455.368818,2581.307811,3380.729182,3215.923445,3381.156658,3239.672293,2693.50188,2005.321354,1533.099321,1115.958};
+    float solartermica[24]={102.634029,138.181326,355.015427,266.787519,645.597457,655.361716,828.492494,661.445101,447.444657,328.182894,172.426246,103.956001,170.978835,208.192368,120.568373,412.77761,621.247495,534.185927,667.235783,619.95899,437.343279,166.240105,104.768426,59.778183};
+    float otrasrenovables[24]={390.590396,365.191889,359.459071,392.274795,390.931927,358.010046,352.713786,410.590237,396.278098,433.047494,434.361576,436.423907,428.663218,374.913003,423.887477,430.376969,397.335983,415.748786,409.345594,383.442347,341.437356,366.964524,364.536652,319.642072};
+    float cogeneracion[24]={2405.236806,1838.16573,2253.823616,2193.285205,2206.328862,2181.276794,2243.226356,2106.285519,2166.255198,2147.907197,2173.751719,2175.103528,2147.921609,2119.152721,2217.055737,1709.641446,1870.643862,1467.383492,1053.738199,779.410997,739.19081,1102.000335,1453.363695,1098.167328};
+    float residuosnore[24]={182.932089,172.740345,184.342436,178.093968,177.333071,198.273452,205.014809,212.202012,179.817184,187.508,179.26082,181.223116,169.946929,144.546715,183.995605,171.926116,170.585177,155.903954,181.020454,164.769537,139.776655,155.069311,127.558061,134.668015};
+    float residuosre[24]={59.850282,69.065868,72.598535,74.357494,59.595065,79.50385,81.91575,81.751572,68.076048,68.765996,80.249832,82.210439,79.365292,72.930818,82.069251,72.848577,79.964147,76.946932,75.732520,65.48815,59.668639,71.884421,67.535659,73.273156};
+    float gentot[24]={24305.47495,21134.389784,22097.189386,19900.364428,20471.481075,19863.791971,22436.768607,21585.235814,20688.868220,20634.64191,23017.698420,23875.280879,24302.335181,21120.725026,22758.010234,21751.098819,22084.406638,23242.456503,26409.488103,25284.741791,23658.546898,21941.569779,21564.342557,22197.577015};
+
   
 	
 	//El usuario elige los datos a utilizar
 
 	printf("Bienvenido al sistema.\n");
 	printf("Disponemos de los datos de generacion de:\n");
-    printf("0. Fechas\n");
 	printf("1. Energia Hidraulica.\n");
 	printf("2. Turbinacion Bombeo.\n");
 	printf("3. Energia Nuclear.\n");
@@ -1573,15 +1594,17 @@ int main()
 	printf("5. Motores Diesel.\n");
 	printf("6. Turbinas de Gas.\n");
 	printf("7. Turbinas de Vapor.\n");
-	printf("8. Energia Hidroeolica.\n");
-	printf("9. Energia Eolica.\n");
-	printf("10. Solar Fotovoltaica.\n");
-	printf("11. Solar Termica.\n");
-	printf("12. Otras Renovables.\n");
-	printf("13. Cogeneracion.\n");
-	printf("14. Residuos no Renovables.\n");
-	printf("15. Residuos Renovables.\n");
-	printf("16. Generacion Total.\n");
+    printf("8. Ciclo combinado\n");
+	printf("9. Energia Hidroeolica.\n");
+	printf("10. Energia Eolica.\n");
+	printf("11. Solar Fotovoltaica.\n");
+	printf("12. Solar Termica.\n");
+	printf("13. Otras Renovables.\n");
+	printf("14. Cogeneracion.\n");
+	printf("15. Residuos no Renovables.\n");
+	printf("16. Residuos Renovables.\n");
+	printf("17. Generacion Total.\n");
+   
 	printf("Introduce el numero asociado al tipo de energia para acceder a los datos\n");
 
     printf("\n");
@@ -1591,133 +1614,6 @@ int main()
 
 	switch(tipo)
 	{
-       case 0:
-            printf("Has accedido a los datos de Fechas.\n");
-            printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
-			scanf("%d", &tipo);
-            if (tipo==1)
-            {
-                printf("Has elegido modificarlos. Ahora puedes: \n");
-				printf("1. Ordenar los datos. \n");
-				printf("2. Calcular estadisticas. \n");
-				printf("3. Alterar (escribir o eliminar) datos. \n");
-				printf("4. Mezclar los datos. \n");
-				scanf("%d", &tipo);
-
-                switch(tipo)
-				{
-					case 1:
-						printf("Has elegido ordenar los datos.\n");
-						break;
-					case 2:
-						printf("Has elegido calcular estadisticas.\n");
-						break;
-					case 3:
-						printf("Has elegido alterar datos.\n");
-						break;
-					case 4:
-						printf("Has elegido mezclar los datos.\n");
-						break;
-					default:
-						printf("Esa no es una opcion.\n");
-						break;
-				}
-            }
-            else if (tipo==2)
-			{
-				printf("Has elegido leerlos.\n");
-                printf("\n");
-                char datofechas;
-               while (fscanf(pf, "%c", &datofechas) != EOF)
-               {
-               fscanf(pf,"%[^,]", chh);
-	            printf("%s,", chh);
-
-                fscanf(pf,"%c",coma);
-	            //printf("%c",coma);	
-
-                fscanf(pf,"%d-%d,",&a,&b);	
-                printf("%d-%d,",a,b);
-
-                fscanf(pf,"%d-%d,",&c,&d);
-	            printf("%d-%d,",c,d);
-
-                fscanf(pf,"%d-%d,", &e,&f);
-                printf("%d-%d,",e,f);
-
-                fscanf(pf,"%d-%d,", &g,&h);
-                printf("%d-%d,",g,h);
-    
-                fscanf(pf,"%d-%d,", &i,&j);
-                printf("%d-%d,",i,j);
-
-                fscanf(pf,"%d-%d,", &k,&l);
-                printf("%d-%d,",k,l);
-
-                fscanf(pf,"%d-%d,", &m,&n);
-                printf("%d-%d,",m,n);
-
-                fscanf(pf,"%d-%d,", &o,&p);
-                printf("%d-%d,",o,p);
-
-                fscanf(pf,"%d-%d,", &q,&r);
-                printf("%d-%d,",q,r);
-
-                fscanf(pf,"%d-%d,", &s,&t);
-                printf("%d-%d,",s,t);
-
-                fscanf(pf,"%d-%d,", &u,&v);
-                printf("%d-%d,",u,v);
-
-                fscanf(pf,"%d-%d,", &w,&x);
-                printf("%d-%d,",w,x);
-
-                fscanf(pf,"%d-%d,", &aa,&ab);
-                printf("%d-%d,",aa,ab);
-
-                fscanf(pf,"%d-%d,", &ac,&ad);
-                printf("%d-%d,",ac,ad);
-
-                fscanf(pf,"%d-%d,", &ae,&af);
-                printf("%d-%d,",ae,af);
-
-                fscanf(pf,"%d-%d,", &ag,&ah);
-                printf("%d-%d,",ag,ah);
-
-                fscanf(pf,"%d-%d,", &ai,&aj);
-                printf("%d-%d,",ai,aj);
-
-                fscanf(pf,"%d-%d,", &ak,&al);
-                printf("%d-%d,",ak,al);
-
-                fscanf(pf,"%d-%d,", &am,&an);
-                printf("%d-%d,",am,an);
-
-                fscanf(pf,"%d-%d,", &ao,&ap);
-                printf("%d-%d,",ao,ap);
-
-                fscanf(pf,"%d-%d,", &aq,&ar);
-                printf("%d-%d,",aq,ar);
-
-                fscanf(pf,"%d-%d,", &as,&at);
-                printf("%d-%d,",as,at);
-
-                fscanf(pf,"%d-%d,", &au,&av);
-                printf("%d-%d,",au,av);
-
-                fscanf(pf,"%d-%d", &aw,&ax);
-                printf("%d-%d", aw,ax);
-               }
-
-               printf("\n");
-			}
-			else 
-			{
-				printf("Error!\n");
-			}
-			break;
-        
-
 		case 1:
 			printf("Has accedido a los datos de Energia Hidraulica.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
@@ -1739,6 +1635,16 @@ int main()
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
+                        float hidraulica[24] = {4517.602492, 3715.416012, 2745.019022, 2159.483245, 2182.252545, 2209.464623, 1883.260803, 1396.698883, 1023.215446, 1199.445532, 2536.803672, 2085.857451, 1174.970169, 1764.806206, 1782.053848, 1922.302375, 1190.985484, 1043.519078, 972.977692, 1153.775681, 717.70239, 1309.281418, 2744.808065};
+                        int n = sizeof(hidraulica) / sizeof(hidraulica[0]);
+                        float media = calcularMedia(hidraulica, n);
+                        float moda = calcularModa(hidraulica, n);
+                        float varianza = calcularVarianza(hidraulica, n);
+
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
+
 						break;
 					case 3:
 						printf("Has elegido alterar datos.\n");
@@ -1843,7 +1749,8 @@ int main()
 			break;
 
 		case 2:
-			printf("Has accedido a los datos de Turbinacion Bombeo.\n");            printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
+			printf("Has accedido a los datos de Turbinacion Bombeo.\n");            
+            printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
 
 			if (tipo==1)
@@ -1862,6 +1769,15 @@ int main()
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
+                        float turbbomb[24]={320.531389,401.293218,330.794555,153.67968,238.708927,105.706304,115.895307,159.688964,118.198104,232.112394,202.806598,269.908819,215.637741,285.079947,273.848152,336.712619,299.880038,270.92393,216.617594,339.372152,304.810326,385.661431,361.663867,485.359059};
+                        int n = sizeof(turbbomb) / sizeof(turbbomb[0]);
+                        float media = calcularMedia(turbbomb, n);
+                        float moda = calcularModa(turbbomb, n);
+                        float varianza = calcularVarianza(turbbomb, n);
+
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
 						break;
 					case 3:
 						printf("Has elegido alterar datos.\n");
@@ -1987,6 +1903,16 @@ int main()
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
+                        float nuclear[24]={5199.740516,4358.515107,4833.065002,4197.33293,4373.250552,3684.377943,5119.328941,5151.337803,4890.618221,4748.364457,3562.2548073,3922.833452,5048.424951,4771.058269,4766.690052,4414.715447,4066.355361,4459.459166,5073.152497,5122.046929,4847.367123,4021.440771,4231.577244,5161.212451};
+    
+                        int n = sizeof(nuclear) / sizeof(nuclear[0]);
+                        float media = calcularMedia(nuclear, n);
+                        float moda = calcularModa(nuclear, n);
+                        float varianza = calcularVarianza(nuclear, n);
+
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
 						break;
 					case 3:
 						printf("Has elegido alterar datos.\n");
@@ -2112,6 +2038,16 @@ int main()
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
+                        float carbon[24]={557.975979,176.266719,242.138946,270.100026,331.931113,473.579232,311.10233,319.182668,477.087202,527.419848,576.437576,719.926373,709.963219,568.629528,705.226125,691.004601,527.154558,833.22046,882.232497,819.592534,632.066719,380.972026,321.469754,693.672984};
+    
+                        int n = sizeof(carbon) / sizeof(carbon[0]);
+                        float media = calcularMedia(carbon, n);
+                        float moda = calcularModa(carbon, n);
+                        float varianza = calcularVarianza(carbon, n);
+                        
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
 						break;
 					case 3:
 						printf("Has elegido alterar datos.\n");
@@ -2237,6 +2173,16 @@ int main()
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
+                        float motordiesel[24]={203.759973,160.418085,173.283976,187.547789,178.362299,206.220592,239.576815,258.860338,256.964192,233.570565,203.062243,215.797238,210.125165,185.575526,207.451789,205.100257,215.84438,224.847296,242.769547,245.673515,216.066723,202.310552,192.196854,200.241967};
+   
+                        int n = sizeof(motordiesel) / sizeof(motordiesel[0]);
+                        float media = calcularMedia(motordiesel, n);
+                        float moda = calcularModa(motordiesel, n);
+                        float varianza = calcularVarianza(motordiesel, n);
+
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
 						break;
 					case 3:
 						printf("Has elegido alterar datos.\n");
@@ -2340,6 +2286,7 @@ int main()
 				printf("Error!\n");
 			}
 			break;
+
 		case 6:
 			printf("Has accedido a los datos de Turbina de gas.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
@@ -2359,6 +2306,17 @@ int main()
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
+
+                        float turbgas[24]={28.766271,18.02613,27.904377,24.553476,24.916217,34.119217,40.565981,47.885346,71.402214,46.314807,30.058985,29.066882,34.446764,34.328002,38.861714,34.57236,42.307777,47.734021,79.729885,85.527648,84.422615,79.275334,47.409887,48.856536};
+    
+                        int n = sizeof(turbgas) / sizeof(turbgas[0]);
+                        float media = calcularMedia(turbgas, n);
+                        float moda = calcularModa(turbgas, n);
+                        float varianza = calcularVarianza(turbgas, n);
+
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
 						break;
 					case 3:
 						printf("Has elegido alterar datos.\n");
@@ -2482,6 +2440,16 @@ int main()
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
+                        float turbvapor[24]={116.282053,104.960847,100.7582590,70.652976,62.41677,33.486942,66.134210,99.644190,113.210213,112.484255,115.109023,112.916219,117.429802,102.630663,114.410944,103.636366,86.849653,60.625902,73.213599,102.417012,110.953990,118.59882,93.771169,122.696654};
+                    
+                        int n = sizeof(turbvapor) / sizeof(turbvapor[0]);
+                        float media = calcularMedia(turbvapor, n);
+                        float moda = calcularModa(turbvapor, n);
+                        float varianza = calcularVarianza(turbvapor, n);
+
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
 						break;
 					case 3:
 						printf("Has elegido alterar datos.\n");
@@ -2585,7 +2553,139 @@ int main()
 			}
 			break;
 
-		case 8:
+            case 8:
+			printf("Has accedido a los datos de Ciclo Combinado.\n");
+			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
+			scanf("%d", &tipo);
+			if (tipo==1)
+			{
+				printf("Has elegido modificarlos. Ahora puedes: \n");
+				printf("1. Ordenar los datos. \n");
+				printf("2. Calcular estadisticas. \n");
+				printf("3. Alterar (escribir o eliminar) datos. \n");
+				printf("4. Mezclar los datos. \n");
+				scanf("%d", &tipo);
+				switch(tipo)
+				{
+					case 1:
+						printf("Has elegido ordenar los datos.\n");
+						break;
+					case 2:
+						printf("Has elegido calcular estadisticas.\n");
+                        float ciclocomb[24]={2729.183017,1544.065785,2151.091661,3384.471579,2444.871606,3658.878948,3718.134418,4047.368387,4943.197265,4407.05637,6317.636788,5154.143508,5898.394445,4671.261013,3873.203200,3146.865903,3713.639484,6478.937315,8460.459144,8082.027681,7704.900731,7066.859015,4672.406377,4368.592847};
+                     
+                        int n = sizeof(ciclocomb) / sizeof(ciclocomb[0]);
+                        float media = calcularMedia(ciclocomb, n);
+                        float moda = calcularModa(ciclocomb, n);
+                        float varianza = calcularVarianza(ciclocomb, n);
+
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
+						break;
+					case 3:
+						printf("Has elegido alterar datos.\n");
+						break;
+					case 4:
+						printf("Has elegido mezclar los datos.\n");
+						break;
+					default:
+						printf("Esa no es una opcion.\n");
+						break;
+				}
+			}
+			else if (tipo==2)
+			{
+				printf("Has elegido leerlos.\n");
+                char datociclocombinado;
+               while (fscanf(pf, "%c", &datociclocombinado) != EOF)
+               {
+                fscanf(pf,"%[^,]", comb);
+	            printf("%s,", comb);
+
+	            fscanf(pf,"%c",coma7);
+
+                fscanf(pf,"%d.%d,", &ia,&ib);
+                printf("%d.%d,",ia,ib);
+
+                fscanf(pf,"%d.%d,", &ic,&id);
+                printf("%d.0%d,",ic,id);
+
+                fscanf(pf,"%d.%d,", &ie,&iff);
+                printf("%d.0%d,",ie,iff);
+
+                fscanf(pf,"%d.%d,", &ig,&ih);
+                printf("%d.%d,",ig,ih);
+
+                fscanf(pf,"%d.%d,", &ii,&ij);
+                printf("%d.%d,",ii,ij);
+
+                fscanf(pf,"%d.%d,", &ik,&il);
+                printf("%d.%d,",ik,il);
+
+                fscanf(pf,"%d.%d,", &im,&in);
+                printf("%d.%d,",im,in);
+
+                fscanf(pf,"%d.%d,", &io,&ip);
+                printf("%d.%d,",io,ip);
+
+                fscanf(pf,"%d.%d,", &iq,&ir);
+                printf("%d.%d,",iq,ir);
+
+                fscanf(pf,"%d.%d,", &is,&it);
+                printf("%d.0%d,",is,it);
+
+                fscanf(pf,"%d.%d,", &iu,&iv);
+                printf("%d.%d,",iu,iv);
+
+                fscanf(pf,"%d.%d,", &iw,&ix);
+                printf("%d.%d,",iw,ix);
+
+                fscanf(pf,"%d.%d,", &iy,&iz);
+                printf("%d.%d,", iy,iz);
+
+                fscanf(pf,"%d.%d,", &iia,&iib);
+                printf("%d.%d,", iia,iib);
+
+                fscanf(pf,"%d.%d,", &iic,&iid);
+                printf("%d.%d,",iic,iid);
+
+                fscanf(pf,"%d.%d,", &iie,&iif);
+                printf("%d.%d,",iie,iif);
+
+                fscanf(pf,"%d.%d,", &iig,&iih);
+                printf("%d.%d,",iig,iih);
+
+                fscanf(pf,"%d.%d,", &iii,&iij);
+                printf("%d.%d,",iii,iij);
+
+                fscanf(pf,"%d.%d,", &iik,&iil);
+                printf("%d.%d,",iik,iil);
+
+                fscanf(pf,"%d.%d,", &iim,&iin);
+                printf("%d.0%d,",iim,iin);
+
+                fscanf(pf,"%d.%d,", &iio,&iip);
+                printf("%d.%d,",iio,iip);
+
+                fscanf(pf,"%d.%d,", &iiq,&iir);
+                printf("%d.%d,", iiq,iir);
+
+                fscanf(pf,"%d.%d,", &iis,&iit);
+                printf("%d.%d,",iis,iit);
+
+                fscanf(pf,"%d.%d", &iiu,&iiv);
+                printf("%d.%d",iiu,iiv);
+               }
+               printf("\n");
+			}
+			else 
+			{
+				printf("Error!\n");
+			}
+			break;
+
+		case 9:
 			printf("Has accedido a los datos de Energia Hidroeolica.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
@@ -2604,6 +2704,15 @@ int main()
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
+                        float hidroeolica[24]={0.99317,1.226483,1.921443,0.835908,3.227077,3.002042,3.578217,2.663478,1.429314,1.853454,1.139789,1.227861,1.110916,1.482045,2.126322,1.752528,1.917174,2.44956,3.562943,3.517675,2.075094,1.350072,1.169409,0.367104};
+    
+                        int n = sizeof(hidroeolica) / sizeof(hidroeolica[0]);
+                        float media = calcularMedia(hidroeolica, n);
+                        float moda = calcularModa(hidroeolica, n);
+                        float varianza = calcularVarianza(hidroeolica, n);
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
 						break;
 					case 3:
 						printf("Has elegido alterar datos.\n");
@@ -2708,7 +2817,7 @@ int main()
 			}
 			break;
 
-		case 9:
+		case 10:
 			printf("Has accedido a los datos de Energia Eolica.\n");   
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
@@ -2727,6 +2836,16 @@ int main()
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
+                        float eolica[24]={7101.249123,6294.982856,5606.818805,4095.800569,4785.695033,3684.170619,4284.090513,3747.238495,3234.274816,4359.563921,6421.739529,6910.032613,5414.777160,4712.962772,6528.440466,5655.806361,4687.64999,3807.180833,4566.002106,4258.846638,4191.189274,5099.919318,6682.534764,5570.282592};
+                        
+                        int n = sizeof(eolica) / sizeof(eolica[0]);
+                        float media = calcularMedia(eolica, n);
+                        float moda = calcularModa(eolica, n);
+                        float varianza = calcularVarianza(eolica, n);
+
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
 						break;
 					case 3:
 						printf("Has elegido alterar datos.\n");
@@ -2833,7 +2952,7 @@ int main()
 			}
 			break;
 
-		case 10:
+		case 11:
 			printf("Has accedido a los datos de Solar Fotovoltaica.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
@@ -2852,6 +2971,16 @@ int main()
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
+                        float solarfoto[24]={848.403074,973.686902,1688.757265,1665.571492,2388.831852,2325.571729,2617.534056,2395.8309,1927.916611,1777.274811,1347.957356,1023.70725,1569.291683,1693.011465,1455.368818,2581.307811,3380.729182,3215.923445,3381.156658,3239.672293,2693.50188,2005.321354,1533.099321,1115.958};           
+                        int n = sizeof(solarfoto) / sizeof(solarfoto[0]);
+                        float media = calcularMedia(solarfoto, n);
+                        float moda = calcularModa(solarfoto, n);
+                        float varianza = calcularVarianza(solarfoto, n);
+
+
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
 						break;
 					case 3:
 						printf("Has elegido alterar datos.\n");
@@ -2957,7 +3086,7 @@ int main()
 			}
 			break;
 
-		case 11:
+		case 12:
 			printf("Has accedido a los datos de Solar Termica.\n");
             printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
@@ -2976,6 +3105,18 @@ int main()
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
+
+                        
+                        float solartermica[24]={102.634029,138.181326,355.015427,266.787519,645.597457,655.361716,828.492494,661.445101,447.444657,328.182894,172.426246,103.956001,170.978835,208.192368,120.568373,412.77761,621.247495,534.185927,667.235783,619.95899,437.343279,166.240105,104.768426,59.778183};
+   
+                        int n = sizeof(solartermica) / sizeof(solartermica[0]);
+                        float media = calcularMedia(solartermica, n);
+                        float moda = calcularModa(solartermica, n);
+                        float varianza = calcularVarianza(solartermica, n);
+
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
 						break;
 					case 3:
 						printf("Has elegido alterar datos.\n");
@@ -3081,7 +3222,7 @@ int main()
 			}
 			break;
 
-		case 12:
+		case 13:
 			printf("Has accedido a los datos de Otras Renovables.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
@@ -3100,6 +3241,15 @@ int main()
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
+                        float otrasrenovables[24]={390.590396,365.191889,359.459071,392.274795,390.931927,358.010046,352.713786,410.590237,396.278098,433.047494,434.361576,436.423907,428.663218,374.913003,423.887477,430.376969,397.335983,415.748786,409.345594,383.442347,341.437356,366.964524,364.536652,319.642072};
+                        int n = sizeof(otrasrenovables) / sizeof(otrasrenovables[0]);
+                        float media = calcularMedia(otrasrenovables, n);
+                        float moda = calcularModa(otrasrenovables, n);
+                        float varianza = calcularVarianza(otrasrenovables, n);
+
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
 						break;
 					case 3:
 						printf("Has elegido alterar datos.\n");
@@ -3204,7 +3354,7 @@ int main()
 			}
 			break;
 
-		case 13:
+		case 14:
 			printf("Has accedido a los datos de Cogeneracion.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
@@ -3223,6 +3373,16 @@ int main()
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
+                        float cogeneracion[24]={2405.236806,1838.16573,2253.823616,2193.285205,2206.328862,2181.276794,2243.226356,2106.285519,2166.255198,2147.907197,2173.751719,2175.103528,2147.921609,2119.152721,2217.055737,1709.641446,1870.643862,1467.383492,1053.738199,779.410997,739.19081,1102.000335,1453.363695,1098.167328};
+
+                        int n = sizeof(cogeneracion) / sizeof(cogeneracion[0]);
+                        float media = calcularMedia(cogeneracion, n);
+                        float moda = calcularModa(cogeneracion, n);
+                        float varianza = calcularVarianza(cogeneracion, n);
+
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
 						break;
 					case 3:
 						printf("Has elegido alterar datos.\n");
@@ -3327,7 +3487,7 @@ int main()
 			}
 			break;
 
-		case 14:
+		case 15:
 			printf("Has accedido a los datos de Residuos no Renovables.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
@@ -3346,6 +3506,15 @@ int main()
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
+                        float residuosnore[24]={182.932089,172.740345,184.342436,178.093968,177.333071,198.273452,205.014809,212.202012,179.817184,187.508,179.26082,181.223116,169.946929,144.546715,183.995605,171.926116,170.585177,155.903954,181.020454,164.769537,139.776655,155.069311,127.558061,134.668015};
+                        int n = sizeof(residuosnore) / sizeof(residuosnore[0]);
+                        float media = calcularMedia(residuosnore, n);
+                        float moda = calcularModa(residuosnore, n);
+                        float varianza = calcularVarianza(residuosnore, n);
+
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
 						break;
 					case 3:
 						printf("Has elegido alterar datos.\n");
@@ -3455,7 +3624,7 @@ int main()
 			}
 			break;
 
-		case 15:
+		case 16:
 			printf("Has accedido a los datos de Residuos Renovables.\n");
 			printf("Ahora elige si Modificar (1) o Leer (2) los datos:\n");
 			scanf("%d", &tipo);
@@ -3474,6 +3643,16 @@ int main()
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
+                        float residuosre[24]={59.850282,69.065868,72.598535,74.357494,59.595065,79.50385,81.91575,81.751572,68.076048,68.765996,80.249832,82.210439,79.365292,72.930818,82.069251,72.848577,79.964147,76.946932,75.732520,65.48815,59.668639,71.884421,67.535659,73.273156};
+         
+                        int n = sizeof(residuosre) / sizeof(residuosre[0]);
+                        float media = calcularMedia(residuosre, n);
+                        float moda = calcularModa(residuosre, n);
+                        float varianza = calcularVarianza(residuosre, n);
+
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
 						break;
 					case 3:
 						printf("Has elegido alterar datos.\n");
@@ -3578,7 +3757,7 @@ int main()
 			}
 			break;
 
-		 case 16:
+		 case 17:
         		printf("Has accedido a los datos de Generacion Total.\n");
         		printf("Ahora elige si Modificar (1) o Editar (2) los datos: \n");
         		scanf("%i", &tipo);
@@ -3598,6 +3777,16 @@ int main()
                 			break;
             				case 2:
                 			printf("Has elegido calcular estadisticas.\n");
+                            float gentot[24]={24305.47495,21134.389784,22097.189386,19900.364428,20471.481075,19863.791971,22436.768607,21585.235814,20688.868220,20634.64191,23017.698420,23875.280879,24302.335181,21120.725026,22758.010234,21751.098819,22084.406638,23242.456503,26409.488103,25284.741791,23658.546898,21941.569779,21564.342557,22197.577015};
+
+                            int n = sizeof(gentot) / sizeof(gentot[0]);
+                            float media = calcularMedia(gentot, n);
+                            float moda = calcularModa(gentot, n);
+                            float varianza = calcularVarianza(gentot, n);
+
+                        printf("La media es: %.2f\n", media);
+                        printf("La moda es: %.2f\n", moda);
+                        printf("La varianza es: %.2f\n", varianza);
                 			break;
             				case 3:
                 			printf("Has elegido alterar datos.\n");
@@ -3745,3 +3934,60 @@ void identificarse()
     }
 }
 
+
+float calcularMedia(float arr[], float n)
+ {
+    int sum = 0;
+    int i;
+
+    for (i = 0; i < n; i++) 
+    {
+        sum += arr[i];
+    }
+
+    return (float)sum / n;
+}
+
+
+float calcularModa(float arr[], float n) 
+{
+    int maxcuenta = 0;
+    int moda = 0;
+    int i, j;
+
+    for (i = 0; i < n; i++) 
+    {
+        int cuenta = 0;
+
+        for (j = 0; j < n; j++) 
+        {
+            if (arr[j] == arr[i]) 
+            {
+                cuenta++;
+            }
+        }
+
+        if (cuenta > maxcuenta) 
+        {
+            maxcuenta = cuenta;
+            moda = arr[i];
+        }
+    }
+
+    return moda;
+}
+
+
+float calcularVarianza(float arr[], float n) 
+{
+    float mean = calcularMedia(arr, n);
+    float sum = 0;
+    int i;
+
+    for (i = 0; i < n; i++)
+    {
+        sum += pow(arr[i] - mean, 2);
+    }
+
+    return sum / n;
+}
