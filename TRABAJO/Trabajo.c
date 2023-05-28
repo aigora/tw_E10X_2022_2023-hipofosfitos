@@ -10,6 +10,8 @@ void identificarse();
 float calcularMedia(float arr[], float n);
 float calcularModa(float arr[], float n); 
 float calcularVarianza(float arr[], float n); 
+void cambiar(int *a, int *b);
+void mezclar(int vec[], int dim);
 
 
 
