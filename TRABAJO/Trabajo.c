@@ -14,8 +14,8 @@ float calcularMedia(float arr[], float n);
 float calcularModa(float arr[], float n); 
 float calcularVarianza(float arr[], float n); 
 void cambiar(float *a, float *b);
-void mezclar(float vec[], float dim);
-void selec(float v[], float n);
+void mezclar(float vec[], int dim);
+//void selec(float v[], float n);
 
 
 
@@ -3921,9 +3921,10 @@ int main()
 					        //float gentot[24]={24305.47495,21134.389784,22097.189386,19900.364428,20471.481075,19863.791971,22436.768607,21585.235814,20688.868220,20634.64191,23017.698420,23875.280879,24302.335181,21120.725026,22758.010234,21751.098819,22084.406638,23242.456503,26409.488103,25284.741791,23658.546898,21941.569779,21564.342557,22197.577015};
 					     mezclar(gentot, 24);
 			    		printf("Datos mezclados: ");
-     					for (int i = 0; i < 24; i++) {
+     					for (int i = 0; i < 24; i++) 
+                        {
          				printf("%f ", gentot[i]);
-					}
+					    }
                 			break;
             				default:
                 			printf("Esa no es una opcion.\n");
@@ -4138,29 +4139,38 @@ void cambiar(float *a, float *b)
  }
 
 
-void mezclar(float vec[], float dim) 
+void mezclar(float vec[], int dim) 
  {
      srand(time(NULL));
 
      for (int i = dim - 1; i > 0; i--) 
      {
-         int j = rand() % (i + 1);
-         cambiar(&vec[i], &vec[j]);
+        int j = rand() % (i + 1);
+        float temp = vec[i];
+        vec[i] = vec[j];
+        vec[j] = temp;
+        
      }
  }
-void selec(float v[], float n) {
-     int i, j, min_idx;
 
-     for (i = 0; i < n - 1; i++) {
-         min_idx = i;
 
-         for (j = i + 1; j < n; j++) {
-             if (v[j] < v[min_idx]) {
-                 min_idx = j;
-             }
-         }
+//void selec(float v[], float n) 
+//{
+    // int i, j, min_idx;
 
-         cambiar(&v[i], &v[min_idx]);
-     }
- }
+     //for (i = 0; i < n - 1; i++) 
+     //{
+         //min_idx = i;
+
+         //for (j = i + 1; j < n; j++) 
+         //{
+            // if (v[j] < v[min_idx]) 
+             //{
+               //  min_idx = j;
+             //}
+         //}
+
+         //camb(&v[i], &v[min_idx]);
+     //}
+//}
 
