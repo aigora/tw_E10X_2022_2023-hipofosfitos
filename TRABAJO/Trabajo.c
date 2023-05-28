@@ -15,6 +15,7 @@ float calcularModa(float arr[], float n);
 float calcularVarianza(float arr[], float n); 
 void cambiar(float *a, float *b);
 void mezclar(float vec[], int dim);
+void limpiarPantalla();
 //void selec(float v[], float n);
 
 
@@ -1593,6 +1594,12 @@ int main()
 	
 	//El usuario elige los datos a utilizar
 
+    char elige[10], elige2[10], elige3[10];
+    int reiniciar = 1;
+
+ while(1)
+   {
+
 	printf("Bienvenido al sistema.\n");
 	printf("Disponemos de los datos de generacion de:\n");
 	printf("1. Energia Hidraulica.\n");
@@ -1639,6 +1646,55 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+
+//Falta
+
+                        printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;
+
+                         printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                       
 						break;
 					case 2:
                         printf("Has elegido calcular estadisticas.\n");
@@ -1651,7 +1707,54 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+
+                        printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
                         break;
+                        
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
 			    			//float hidraulica[24] = {4517.602492, 3715.416012, 2745.019022, 2159.483245, 2182.252545, 2209.464623, 1883.260803, 1396.698883, 1023.215446, 1199.445532, 2536.803672, 2085.857451, 1174.970169, 1764.806206, 1782.053848, 1922.302375, 1190.985484, 1043.519078, 972.977692, 1153.775681, 717.70239, 1309.281418, 2744.808065};
@@ -1662,13 +1765,57 @@ int main()
          					printf("%f ", hidraulica[i]);
 						    }
 						printf("\n");
-						break;
-					default:
-						printf("Esa no es una opcion.\n");
-						break;
-				
-			       }
-                }
+                        printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+//No va bien
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                        break;
+
+						
+            }
+            }      
+            
             
                 
 			else if (tipo==2)
@@ -1755,6 +1902,54 @@ int main()
                 printf("%d.%d",bbu,bbv);
                }
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+                printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
 			}
 			else 
 			{
@@ -1780,6 +1975,54 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+//Falta
+
+                        printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
@@ -1792,6 +2035,53 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+
+                        printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
@@ -1802,6 +2092,54 @@ int main()
          					printf("%f ", turbbomb[i]);
 						}
 						printf("\n");
+
+//No va bien
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					default:
 						printf("Esa no es una opcion.\n");
@@ -1891,10 +2229,53 @@ int main()
 
                 fscanf(pf,"%d.%d", &ccu,&ccv);
                 printf("%d.%d",ccu,ccv);
-
                }
-
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+               if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
 			}
 			else 
 			{
@@ -1917,6 +2298,55 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+
+
+//Falta
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
@@ -1930,6 +2360,52 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
@@ -1940,6 +2416,55 @@ int main()
          					printf("%f ", nuclear[i]);
 						}
 						printf("\n");
+
+//No va bien
+
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					default:
 						printf("Esa no es una opcion.\n");
@@ -2031,6 +2556,51 @@ int main()
                }
 
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+               if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
 
 			}
 			else 
@@ -2055,6 +2625,55 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+
+
+//Falta
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
@@ -2068,6 +2687,52 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
@@ -2079,6 +2744,54 @@ int main()
          					printf("%f ", carbon[i]);
 						    }
 						printf("\n");
+
+//No va bien
+                        printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                                              
 						break;
 					default:
 						printf("Esa no es una opcion.\n");
@@ -2172,6 +2885,51 @@ int main()
                }
 
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+               if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
 			}
 			else 
 			{
@@ -2194,6 +2952,55 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+
+//Falta
+
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
@@ -2207,6 +3014,52 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
@@ -2217,6 +3070,54 @@ int main()
          					printf("%f ", motordiesel[i]);
 						}
 						printf("\n");
+
+//No va bien 
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					default:
 						printf("Esa no es una opcion.\n");
@@ -2308,6 +3209,51 @@ int main()
 
                }
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+               if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
 			}
 			else 
 			{
@@ -2330,6 +3276,55 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+                        
+              //Falta          
+                        
+                        printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
@@ -2344,6 +3339,52 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
@@ -2354,6 +3395,54 @@ int main()
          					printf("%f ", turbgas[i]);
 						}
 						printf("\n");
+
+//No va bien
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					default:
 						printf("Esa no es una opcion.\n");
@@ -2445,6 +3534,51 @@ int main()
                }
 
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+               if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
 			}
 			else 
 			{
@@ -2467,6 +3601,55 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+                        
+              //Falta          
+                        
+                        printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
@@ -2480,6 +3663,52 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
@@ -2491,6 +3720,54 @@ int main()
          					printf("%f ", turbvapor[i]);
 						}
 						printf("\n");
+
+//No va bien
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					default:
 						printf("Esa no es una opcion.\n");
@@ -2581,6 +3858,51 @@ int main()
                 printf("%d.%d",hhu,hhv);
                }
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+               if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
 			}
 			else 
 			{
@@ -2603,6 +3925,54 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+
+//Falta
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
@@ -2616,6 +3986,53 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
@@ -2626,6 +4043,54 @@ int main()
          					printf("%f ", ciclocomb[i]);
 						}
 						printf("\n");
+
+//No va bien
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					default:
 						printf("Esa no es una opcion.\n");
@@ -2716,6 +4181,51 @@ int main()
                 printf("%d.%d",iiu,iiv);
                }
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+               if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
 			}
 			else 
 			{
@@ -2738,6 +4248,54 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+
+//Falta
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
@@ -2750,6 +4308,52 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
@@ -2760,6 +4364,54 @@ int main()
          					printf("%f ", hidroeolica[i]);
 						}
 						printf("\n");
+
+//No va bien
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					default:
 						printf("Esa no es una opcion.\n");
@@ -2851,6 +4503,51 @@ int main()
                }
 
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+               if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
 			}
 			else 
 			{
@@ -2873,6 +4570,55 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+
+
+//Falta
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
@@ -2886,6 +4632,53 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
@@ -2896,6 +4689,54 @@ int main()
          					printf("%f ", eolica[i]);
 						}
 						printf("\n");
+
+//No va bien
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					    default:
 						printf("Esa no es una opcion.\n");
@@ -2988,7 +4829,51 @@ int main()
                }
 
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+               if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
 
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
 			}
 			else 
 			{
@@ -3011,6 +4896,54 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+
+//Falta
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
@@ -3024,6 +4957,52 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
@@ -3034,6 +5013,54 @@ int main()
          					printf("%f ", solarfoto[i]);
 						}
 						printf("\n");
+//No va bien
+
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					default:
 						printf("Esa no es una opcion.\n");
@@ -3125,6 +5152,51 @@ int main()
                }
 
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+               if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
 
 			}
 			else 
@@ -3148,6 +5220,54 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+
+//Falta
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
@@ -3163,6 +5283,52 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
@@ -3173,6 +5339,55 @@ int main()
          					printf("%f ", solartermica[i]);
 						}
 						printf("\n");
+
+         //No va bien               
+
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					default:
 						printf("Esa no es una opcion.\n");
@@ -3265,6 +5480,51 @@ int main()
                }
 
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+               if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
 			}
 			else 
 			{
@@ -3287,6 +5547,55 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+
+      //Falta                  
+
+                     printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
@@ -3299,18 +5608,114 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
 						//float otrasrenovables[24]={390.590396,365.191889,359.459071,392.274795,390.931927,358.010046,352.713786,410.590237,396.278098,433.047494,434.361576,436.423907,428.663218,374.913003,423.887477,430.376969,397.335983,415.748786,409.345594,383.442347,341.437356,366.964524,364.536652,319.642072};
 						mezclar(otrasrenovables, 24);
 			    			printf("Datos mezclados: ");
-     						for (int i = 0; i < 24; i++) {
+     						for (int i = 0; i < 24; i++) 
+                            {
          					printf("%f ", otrasrenovables[i]);
-						}
+						   }
+//No va bien
+
+                        printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					default:
 						printf("Esa no es una opcion.\n");
+
 						break;
 				}
 			}
@@ -3399,6 +5804,51 @@ int main()
                }
 
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+               if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
 			}
 			else 
 			{
@@ -3421,6 +5871,54 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+
+//Falta          
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
@@ -3434,6 +5932,52 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
@@ -3443,6 +5987,55 @@ int main()
      						for (int i = 0; i < 24; i++) {
          					printf("%f ", cogeneracion[i]);
 						}
+
+//No va bien
+
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					default:
 						printf("Esa no es una opcion.\n");
@@ -3534,6 +6127,51 @@ int main()
                }
 
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+               if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
 			}
 			else 
 			{
@@ -3556,6 +6194,55 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+
+//Falta
+
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
@@ -3568,6 +6255,52 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
@@ -3577,6 +6310,55 @@ int main()
      						for (int i = 0; i < 24; i++) {
          					printf("%f ", residuosnore[i]);
 						}
+//No va bien
+
+
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					default:
 						printf("Esa no es una opcion.\n");
@@ -3673,6 +6455,51 @@ int main()
                }
 
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+               if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
 			}
 			else 
 			{
@@ -3695,6 +6522,56 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+//Falta
+
+
+
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 2:
 						printf("Has elegido calcular estadisticas.\n");
@@ -3708,15 +6585,111 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
 						//float residuosre[24]={59.850282,69.065868,72.598535,74.357494,59.595065,79.50385,81.91575,81.751572,68.076048,68.765996,80.249832,82.210439,79.365292,72.930818,82.069251,72.848577,79.964147,76.946932,75.732520,65.48815,59.668639,71.884421,67.535659,73.273156};
 						mezclar(residuosre, 24);
 			    			printf("Datos mezclados: ");
-     						for (int i = 0; i < 24; i++) {
+     						for (int i = 0; i < 24; i++)
+                             {
          					printf("%f ", residuosre[i]);
-						}
+						   }
+//No va bien
+
+
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
 						break;
 					default:
 						printf("Esa no es una opcion.\n");
@@ -3808,6 +6781,51 @@ int main()
                 printf("%d.%d",ppu,ppv);
                }
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+               if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
 			}
 			else 
 			{
@@ -3831,6 +6849,55 @@ int main()
             			{
                 			case 1:
                 			printf("Has elegido ordenar los datos.\n");
+
+//Falta
+
+                        printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
                 			break;
             				case 2:
                 			printf("Has elegido calcular estadisticas.\n");
@@ -3844,6 +6911,52 @@ int main()
                         printf("La media es: %.2f\n", media);
                         printf("La moda es: %.2f\n", moda);
                         printf("La varianza es: %.2f\n", varianza);
+                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
                 			break;
             			
             				case 3:
@@ -3855,6 +6968,55 @@ int main()
                         {
          				printf("%f ", gentot[i]);
 					    }
+
+//No va bien
+
+                        printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+                        if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      
                 			break;
             				default:
                 			printf("Esa no es una opcion.\n");
@@ -3945,6 +7107,51 @@ int main()
                 printf("%d.%d",qqu,qqv);
                 }
                printf("\n");
+               printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                scanf(" %s", elige);
+               if (elige[0] == 'w' || elige[0] == 'W')
+                        {
+                        limpiarPantalla();
+                        printf("Pantalla borrada.\n");
+
+                        printf("¿Deseas cerrar el programa (c) o volver al inicio (i)? ");
+                        scanf("%s", elige2);
+
+                        if (elige2[0] == 'c' || elige2[0] == 'C')
+                        {
+                            break;
+                        }
+                        else if (elige2[0] == 'i' || elige2[0] == 'I')
+                        {
+                            limpiarPantalla();
+                            continue;
+                        }
+                        else
+                        {
+                            printf("Opción inválida. Saliendo del programa.\n");
+                            break;
+                        }
+                         }
+                        else
+                        {
+                        printf("Tecla incorrecta. Intenta de nuevo.\n");
+                        }
+                
+                        break;                
+
+                        printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
+                         scanf(" %s", elige3);
+
+                         if (elige3[0] != 'r' && elige3[0] != 'R')
+                        {
+                        reiniciar = 0;
+                        }
+                        else
+                             {
+                         limpiarPantalla();
+                         reiniciar = 1;
+                        }
+                      break;
         		 }
         		 else 
         		 {
@@ -3962,7 +7169,8 @@ int main()
             
 	fclose(pf);	
       
-
+   }
+   while (reiniciar);
 
 	return 0;
 }
@@ -4082,6 +7290,13 @@ void mezclar(float vec[], int dim)
         
      }
  }
+
+
+void limpiarPantalla()
+{
+    system("clear"); // Utilizamos "clear" para limpiar la pantalla en sistemas Unix
+}
+
 
 
 //void selec(float v[], float n) 
