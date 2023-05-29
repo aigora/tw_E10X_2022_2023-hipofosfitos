@@ -18,7 +18,6 @@ Sergio Díaz Gegundez        || serdige
 ## Objetivos del trabajo
 
 - Te permite la lectura de los datos.
-- Te posibilita la modificación de los datos.
 - Te calcula estadisticas.
-- Te proporciona que los datos se mezclen.
+- Te proporciona el valor mas alto.
 - Te ordena los datos segun tus criterios.
