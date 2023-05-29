@@ -8049,7 +8049,7 @@ void mezclar(float vec[], int dim)
 
 void limpiarPantalla()
 {
-    system("clear"); // Utilizamos "clear" para limpiar la pantalla en sistemas Unix
+    system("clear"); // Utilizamos "clear" para limpiar la pantalla en sistemas Unix en windows "clc"
 }
 
 
