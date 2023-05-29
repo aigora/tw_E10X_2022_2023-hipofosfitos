@@ -17,6 +17,7 @@ void cambiar(float *a, float *b);
 void mezclar(float vec[], int dim);
 void limpiarPantalla();
 //void selec(float v[], float n);
+void ordenarVector(int vector[], int orden);
 
 
 
@@ -7318,11 +7319,11 @@ void limpiarPantalla()
          //camb(&v[i], &v[min_idx]);
      //}
 //}
-void ordenar(int vector[], int dimension, int orden) {
+void ordenarVector(int vector[], int orden) {
     int i, j, temp;
     
-    for (i = 0; i < dimension - 1; i++) {
-        for (j = 0; j < dimension - i - 1; j++) {
+    for (i = 0; i < 24 - 1; i++) {
+        for (j = 0; j < 24 - i - 1; j++) {
             if ((orden == 0 && vector[j] < vector[j + 1]) || (orden == 1 && vector[j] > vector[j + 1])) {
                 temp = vector[j];
                 vector[j] = vector[j + 1];
