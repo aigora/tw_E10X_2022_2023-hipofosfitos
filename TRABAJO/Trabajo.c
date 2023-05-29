@@ -17,7 +17,7 @@ void limpiarPantalla();
 void printList(float vector[], int longitud);
 int mayorAmenor(const void* a, const void* b);
 int menorAmayor(const void* a, const void* b);
-int aleatorio(const void* a, const void* b);
+float encontrarMaximo(float datos[], int longitud);
 
 
 int main()
@@ -1640,7 +1640,7 @@ int main()
 				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
-				printf("3. Mezclar los datos. \n");
+				printf("3. Obtener el valor mas alto. \n");
 				scanf("%d", &tipo);
 
 				switch(tipo)
@@ -1789,8 +1789,14 @@ int main()
                         }
                         
 					case 3:
-						printf("Has elegido mezclar los datos.\n");
-	          if (elige[0] == 'w' || elige[0] == 'W')
+						printf("Has elegido obtener el valor mas alto.\n");
+
+
+                        printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
+                        scanf(" %s", elige);
+
+
+	                     if (elige[0] == 'w' || elige[0] == 'W')
                         {
                         limpiarPantalla();
                         printf("Pantalla borrada.\n");
@@ -2002,7 +2008,7 @@ int main()
 				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
-				printf("3. Mezclar los datos. \n");
+				printf("3. Obtener el valor mas alto. \n");
 				scanf("%d", &tipo);
 
 				switch(tipo)
@@ -2151,11 +2157,11 @@ int main()
                       
 						break;
 					case 3:
-						printf("Has elegido mezclar los datos.\n");
+						printf("Has elegido obtener el valor mas alto.\n");
 						
 						printf("\n");
 
-//No va bien
+
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
 
@@ -2366,7 +2372,7 @@ int main()
 				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
-				printf("3. Mezclar los datos. \n");
+				printf("3. Obtener el valor mas alto. \n");
 				scanf("%d", &tipo);
 				switch(tipo)
 				{
@@ -2513,11 +2519,11 @@ int main()
                       
 						break;
 					case 3:
-						printf("Has elegido mezclar los datos.\n");
+						printf("Has elegido obtener el valor mas alto.\n");
 						
 						printf("\n");
 
-//No va bien
+
 
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -2731,7 +2737,7 @@ int main()
 				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
-				printf("3. Mezclar los datos. \n");
+				printf("3. Obtener el valor mas alto. \n");
 				scanf("%d", &tipo);
 				switch(tipo)
 				{
@@ -2878,11 +2884,11 @@ int main()
                       
 						break;
 					case 3:
-						printf("Has elegido mezclar los datos.\n");
+						printf("Has elegido obtener el valor mas alto.\n");
 						
 						printf("\n");
 
-//No va bien
+
                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
 
@@ -3095,7 +3101,7 @@ int main()
 				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
-				printf("3. Mezclar los datos. \n");
+				printf("3. Obtener el valor mas alto. \n");
 				scanf("%d", &tipo);
 				switch(tipo)
 				{
@@ -3243,11 +3249,11 @@ int main()
                       
 						break;
 					case 3:
-						printf("Has elegido mezclar los datos.\n");
+						printf("Has elegido obtener el valor mas alto.\n");
 						
 						printf("\n");
 
-//No va bien 
+
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
 
@@ -3458,7 +3464,7 @@ int main()
 				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
-				printf("3. Mezclar los datos. \n");
+				printf("3. Obtener el valor mas alto. \n");
 				scanf("%d", &tipo);
 				switch(tipo)
 				{
@@ -3607,11 +3613,11 @@ int main()
                       
 						break;
 					case 3:
-						printf("Has elegido mezclar los datos.\n");
+						printf("Has elegido obtener el valor mas alto.\n");
 						
 						printf("\n");
 
-//No va bien
+
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
 
@@ -3822,7 +3828,7 @@ int main()
 				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
-				printf("3. Mezclar los datos. \n");
+				printf("3. Obtener el valor mas alto. \n");
 				scanf("%d", &tipo);
 				switch(tipo)
 				{
@@ -3970,12 +3976,11 @@ int main()
                       
 						break;
 					case 3:
-						printf("Has elegido mezclar los datos.\n");
-						//float turbvapor[24]={116.282053,104.960847,100.7582590,70.652976,62.41677,33.486942,66.134210,99.644190,113.210213,112.484255,115.109023,112.916219,117.429802,102.630663,114.410944,103.636366,86.849653,60.625902,73.213599,102.417012,110.953990,118.59882,93.771169,122.696654};
+						printf("Has elegido obtener el valor mas alto.\n");
 						
 						printf("\n");
 
-//No va bien
+
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
 
@@ -4185,7 +4190,7 @@ int main()
 				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
-				printf("3. Mezclar los datos. \n");
+				printf("3. Obtener el valor mas alto. \n");
 				scanf("%d", &tipo);
 				switch(tipo)
 				{
@@ -4333,7 +4338,7 @@ int main()
                       
 						break;
 					case 3:
-						printf("Has elegido mezclar los datos.\n");
+						printf("Has elegido obtener el valor mas alto.\n");
 	
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -4544,7 +4549,7 @@ int main()
 				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
-				printf("3. Mezclar los datos. \n");
+				printf("3. Obtener el valor mas alto. \n");
 				scanf("%d", &tipo);
 				switch(tipo)
 				{
@@ -4691,7 +4696,7 @@ int main()
                       
 						break;
 					case 3:
-						printf("Has elegido mezclar los datos.\n");
+						printf("Has elegido obtener el valor mas alto.\n");
 			
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -4903,7 +4908,7 @@ int main()
 				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
-				printf("3. Mezclar los datos. \n");
+				printf("3. Obtener el valor mas alto. \n");
 				scanf("%d", &tipo);
 				switch(tipo)
 				{
@@ -5051,7 +5056,7 @@ int main()
                       
 						break;
 					case 3:
-						printf("Has elegido mezclar los datos.\n");
+						printf("Has elegido obtener el valor mas alto.\n");
 				
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -5264,7 +5269,7 @@ int main()
 				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
-				printf("3. Mezclar los datos. \n");
+				printf("3. Obtener el valor mas alto. \n");
 				scanf("%d", &tipo);
 				switch(tipo)
 				{
@@ -5411,7 +5416,7 @@ int main()
                       
 						break;
 					case 3:
-						printf("Has elegido mezclar los datos.\n");
+						printf("Has elegido obtener el valor mas alto.\n");
 			
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -5624,7 +5629,7 @@ int main()
 				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
-				printf("3. Mezclar los datos. \n");
+				printf("3. Obtener el valor mas alto. \n");
 				scanf("%d", &tipo);
 				switch(tipo)
 				{
@@ -5773,7 +5778,7 @@ int main()
                       
 						break;
 					case 3:
-						printf("Has elegido mezclar los datos.\n");
+						printf("Has elegido obtener el valor mas alto.\n");
 		              
 
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
@@ -5987,7 +5992,7 @@ int main()
 				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
-				printf("3. Mezclar los datos. \n");
+				printf("3. Obtener el valor mas alto. \n");
 				scanf("%d", &tipo);
 				switch(tipo)
 				{
@@ -6133,7 +6138,7 @@ int main()
                       
 						break;
 					case 3:
-						printf("Has elegido mezclar los datos.\n");
+						printf("Has elegido obtener el valor mas alto.\n");
 
                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -6346,7 +6351,7 @@ int main()
 				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
-				printf("3. Mezclar los datos. \n");
+				printf("3. MObtener el valor mas alto. \n");
 				scanf("%d", &tipo);
 				switch(tipo)
 				{
@@ -6493,7 +6498,7 @@ int main()
                       
 						break;
 					case 3:
-						printf("Has elegido mezclar los datos.\n");
+						printf("Has elegido obtener el valor mas alto.\n");
 			
 
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
@@ -6706,7 +6711,7 @@ int main()
 				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
-				printf("3. Mezclar los datos. \n");
+				printf("3. Obtener el valor mas alto. \n");
 				scanf("%d", &tipo);
 				switch(tipo)
 				{
@@ -6735,7 +6740,7 @@ int main()
 
                             printf("\n");
 
-//Falta
+
 
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -6855,7 +6860,7 @@ int main()
                       
 						break;
 					case 3:
-						printf("Has elegido mezclar los datos.\n");
+						printf("Has elegido obtener el valor mas alto.\n");
 			
 
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
@@ -7073,7 +7078,7 @@ int main()
 				printf("Has elegido modificarlos. Ahora puedes: \n");
 				printf("1. Ordenar los datos. \n");
 				printf("2. Calcular estadisticas. \n");
-				printf("3. Mezclar los datos. \n");
+				printf("3. Obtener el valor mas alto. \n");
 				scanf("%d", &tipo);
 				switch(tipo)
 				{
@@ -7101,7 +7106,6 @@ int main()
                             }
 
                             printf("\n");
-//Falta
 
 
 
@@ -7224,7 +7228,7 @@ int main()
                       
 						break;
 					case 3:
-						printf("Has elegido mezclar los datos.\n");
+						printf("Has elegido obtener el valor mas alto.\n");
 						
 
 
@@ -7440,7 +7444,7 @@ int main()
             			printf("Ahora puedes:\n");
             			printf("1. Ordenar los datos.\n");
             			printf("2. Calcular estadísticas.\n");
-            			printf("3. Mezclar los datos.\n");
+            			printf("3. Obtener el valor mas alto.\n");
             			scanf("%i", &tipo);
             			switch (tipo)
             			{
@@ -7590,16 +7594,17 @@ int main()
                 			break;
             			
             				case 3:
-                			printf("Has elegido mezclar los datos.\n");
+                			printf("Has elegido obtener el valor mas alto.\n");
                            
-                             longitud = sizeof(gentot) / sizeof(gentot[0]);
+                            float Datos17[24]={24305.47495,21134.389784,22097.189386,19900.364428,20471.481075,19863.791971,22436.768607,21585.235814,20688.868220,20634.64191,23017.698420,23875.280879,24302.335181,21120.725026,22758.010234,21751.098819,22084.406638,23242.456503,26409.488103,25284.741791,23658.546898,21941.569779,21564.342557,22197.577015};
 
-                            srand(time(NULL));
-                             qsort(gentot, longitud, sizeof(int), aleatorio);
-                             // Imprimir el vector desordenado aleatoriamente
-                            printList(gentot, longitud);
-                            
-                            printf("\n");
+                             longitud = sizeof(Datos17) / sizeof(Datos17[0]);
+
+                            float maximo = encontrarMaximo(Datos17, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
+
+
+                             printf("\n");
                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
 
@@ -7613,7 +7618,7 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
-                             reiniciar = 0;
+                            reiniciar = 0;
                             cerrar = 1;
                             break;
                         }
@@ -7939,7 +7944,18 @@ int menorAmayor(const void* a, const void* b)
     return (*(int*)a - *(int*)b);
 }
 
-int aleatorio(const void* a, const void* b) 
+float encontrarMaximo(float datos[], int longitud) 
 {
-   return rand() % 100-50;
+    float maximo = datos[0];  
+
+    for (int i = 1; i < longitud; i++) 
+    {
+        if (datos[i] > maximo) 
+        {
+            maximo = datos[i];  
+        }
+    }
+
+    return maximo;
 }
+
