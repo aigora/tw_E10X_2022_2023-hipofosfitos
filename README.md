@@ -1,5 +1,5 @@
 # Electro Speed
-¡Bienbenido a Electro Speed!
+¡Bienvenido a Electro Speed!
 
 Nuestro trabajo es una herramienta orientada 
 a la consulta y modificación de la base de datos 
