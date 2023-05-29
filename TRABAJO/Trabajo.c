@@ -7093,7 +7093,7 @@ int main()
     // Imprimir el vector ordenado
     printf("\n datos ordenados:\n");
     for (i = 0; i < 24; i++) {
-        printf("%d ", vector[i]);
+        printf("%d ", gentot[i]);
     }
     
     return 0;
