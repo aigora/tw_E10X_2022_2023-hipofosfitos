@@ -1796,6 +1796,7 @@ int main()
 
                             float maximo = encontrarMaximo(Datos1, longitud);
                              printf("El valor máximo es: %.6f\n", maximo);
+						printf("\n");
 
 
                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
@@ -4390,6 +4391,7 @@ int main()
 
                             float maximo = encontrarMaximo(Datos8, longitud);
                              printf("El valor máximo es: %.6f\n", maximo);
+						printf("\n");
 	
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -4754,6 +4756,7 @@ int main()
 
                             float maximo = encontrarMaximo(Datos9, longitud);
                              printf("El valor máximo es: %.6f\n", maximo);
+						printf("\n");
 			
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -5121,6 +5124,7 @@ int main()
 
                             float maximo = encontrarMaximo(Datos10, longitud);
                              printf("El valor máximo es: %.6f\n", maximo);
+						printf("\n");
 				
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -5488,6 +5492,7 @@ int main()
 
                             float maximo = encontrarMaximo(Datos11, longitud);
                              printf("El valor máximo es: %.6f\n", maximo);
+						printf("\n");
 			
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -5856,6 +5861,7 @@ int main()
 
                             float maximo = encontrarMaximo(Datos12, longitud);
                              printf("El valor máximo es: %.6f\n", maximo);
+						printf("\n");
 		              
 
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
@@ -6223,6 +6229,7 @@ int main()
 
                             float maximo = encontrarMaximo(Datos13, longitud);
                              printf("El valor máximo es: %.6f\n", maximo);
+						printf("\n");
 
                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -6590,6 +6597,7 @@ int main()
 
                             float maximo = encontrarMaximo(Datos14, longitud);
                              printf("El valor máximo es: %.6f\n", maximo);
+						printf("\n");
 			
 
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
@@ -6959,6 +6967,7 @@ int main()
 
                             float maximo = encontrarMaximo(Datos15, longitud);
                              printf("El valor máximo es: %.6f\n", maximo);
+						printf("\n");
 						
 
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
@@ -7335,6 +7344,7 @@ int main()
 
                             float maximo = encontrarMaximo(Datos16, longitud);
                              printf("El valor máximo es: %.6f\n", maximo);
+						printf("\n");
 						
 
 
