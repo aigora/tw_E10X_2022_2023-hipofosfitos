@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+#define SIZE 24
+
+void ordenarMatriz(int matriz[], int tam, int orden) {
+    int i, j, temp;
+    
+    for (i = 0; i < tam - 1; i++) {
+        for (j = i + 1; j < tam; j++) {
+            if ((orden == 0 && matriz[i] < matriz[j]) || (orden == 1 && matriz[i] > matriz[j])) {
+                temp = matriz[i];
+                matriz[i] = matriz[j];
+                matriz[j] = temp;
+            }
+        }
+    }
+}
+
+void imprimirMatriz(int matriz[], int tam) {
+    int i;
+    
+    for (i = 0; i < tam; i++) {
+        printf("%d ", matriz[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int matriz[SIZE] = {12, 54, 23, 7, 98, 36, 45, 10, 87, 34, 21, 67, 91, 16, 3, 78, 56, 19, 32, 65, 29, 5, 43, 76};
+    int opcion;
+    
+    printf("¿Cómo desea ordenar la matriz?\n");
+    printf("1. De mayor a menor\n");
+    printf("2. De menor a mayor\n");
+    printf("Seleccione una opción: ");
+    scanf("%d", &opcion);
+    
+    switch (opcion) {
+        case 1:
+            ordenarMatriz(matriz, SIZE, 0); // Ordenar de mayor a menor
+            printf("Matriz ordenada de mayor a menor:\n");
+            imprimirMatriz(matriz, SIZE);
+            break;
+        case 2:
+            ordenarMatriz(matriz, SIZE, 1); // Ordenar de menor a mayor
+            printf("Matriz ordenada de menor a mayor:\n");
+            imprimirMatriz(matriz, SIZE);
+            break;
+        default:
+            printf("Opción inválida\n");
+            break;
+    }
+    
+    return 0;
+}

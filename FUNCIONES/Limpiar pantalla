@@ -1,0 +1,4 @@
+void limpiarPantalla()
+{
+    system("clear"); // Utilizamos "clear" para limpiar la pantalla en sistemas Unix
+}

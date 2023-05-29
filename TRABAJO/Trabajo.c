@@ -5706,7 +5706,7 @@ int main()
 				switch(tipo)
 				{
 					case 1:
-						printf("Has elegido ordenar los datos.\n);
+						printf("Has elegido ordenar los datos.\n");
 			    int decision;
                             int longitud = sizeof(solartermica) / sizeof(solartermica[0]);
                             printf("1. Mayor a menor o 2. Menor a mayor");
@@ -8073,43 +8073,3 @@ int menorAmayor(const void* a, const void* b)
 {
     return (*(int*)a - *(int*)b);
 }
-
-
-
-//void selec(float v[], float n) 
-//{
-    // int i, j, min_idx;
-
-     //for (i = 0; i < n - 1; i++) 
-     //{
-         //min_idx = i;
-
-         //for (j = i + 1; j < n; j++) 
-         //{
-            // if (v[j] < v[min_idx]) 
-             //{
-               //  min_idx = j;
-             //}
-         //}
-
-         //camb(&v[i], &v[min_idx]);
-     //}
-//}
-
-//void ordenarVector(float vector[], int orden) 
-//{
-  //  int i, j, temp;
-    //
-    //forr (i = 0; i < 24 - 1; i++) 
-    //{}
-       // //for (j = 0; j < 24 - i - 1; j++) 
-        //{}
-            //if ((orden == 0 && vector[j] < vector[j + 1]) || (orden == 1 && vector[j] > vector[j + 1])) 
-            //{}
-               // temp = vector[j];
-                //vector[j] = vector[j + 1];
-               // vector[j + 1] = temp;
-            //}
-        //}
-   // }
-//}
