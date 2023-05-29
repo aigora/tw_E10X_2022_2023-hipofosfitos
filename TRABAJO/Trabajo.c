@@ -1790,6 +1790,12 @@ int main()
                         
 					case 3:
 						printf("Has elegido obtener el valor mas alto.\n");
+						float Datos1[24] = {4517.602492, 3715.416012, 2745.019022, 2159.483245, 2182.252545, 2209.464623, 1883.260803, 1396.698883, 1023.215446, 1199.445532, 2536.803672, 2085.857451, 1174.970169, 1764.806206, 1782.053848, 1922.302375, 1190.985484, 1043.519078, 972.977692, 1153.775681, 717.70239, 1309.281418, 2744.808065};
+						
+						longitud = sizeof(Datos1) / sizeof(Datos1[0]);
+
+                            float maximo = encontrarMaximo(Datos1, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
 
 
                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
@@ -2158,6 +2164,12 @@ int main()
 						break;
 					case 3:
 						printf("Has elegido obtener el valor mas alto.\n");
+						float Datos2[24]={320.531389,401.293218,330.794555,153.67968,238.708927,105.706304,115.895307,159.688964,118.198104,232.112394,202.806598,269.908819,215.637741,285.079947,273.848152,336.712619,299.880038,270.92393,216.617594,339.372152,304.810326,385.661431,361.663867,485.359059};
+						
+						longitud = sizeof(Datos2) / sizeof(Datos2[0]);
+
+                            float maximo = encontrarMaximo(Datos2, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
 						
 						printf("\n");
 
@@ -2520,6 +2532,13 @@ int main()
 						break;
 					case 3:
 						printf("Has elegido obtener el valor mas alto.\n");
+						float Datos3[24]={5199.740516,4358.515107,4833.065002,4197.33293,4373.250552,3684.377943,5119.328941,5151.337803,4890.618221,4748.364457,3562.2548073,3922.833452,5048.424951,4771.058269,4766.690052,4414.715447,4066.355361,4459.459166,5073.152497,5122.046929,4847.367123,4021.440771,4231.577244,5161.212451};
+ 
+						
+						longitud = sizeof(Datos3) / sizeof(Datos3[0]);
+
+                            float maximo = encontrarMaximo(Datos3, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
 						
 						printf("\n");
 
@@ -2886,6 +2905,13 @@ int main()
 					case 3:
 						printf("Has elegido obtener el valor mas alto.\n");
 						
+						float Datos4[24]={557.975979,176.266719,242.138946,270.100026,331.931113,473.579232,311.10233,319.182668,477.087202,527.419848,576.437576,719.926373,709.963219,568.629528,705.226125,691.004601,527.154558,833.22046,882.232497,819.592534,632.066719,380.972026,321.469754,693.672984};
+						
+						longitud = sizeof(Datos4) / sizeof(Datos4[0]);
+
+                            float maximo = encontrarMaximo(Datos4, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
+						
 						printf("\n");
 
 
@@ -3250,6 +3276,12 @@ int main()
 						break;
 					case 3:
 						printf("Has elegido obtener el valor mas alto.\n");
+						float Datos5[24]={203.759973,160.418085,173.283976,187.547789,178.362299,206.220592,239.576815,258.860338,256.964192,233.570565,203.062243,215.797238,210.125165,185.575526,207.451789,205.100257,215.84438,224.847296,242.769547,245.673515,216.066723,202.310552,192.196854,200.241967};
+						
+						longitud = sizeof(Datos5) / sizeof(Datos5[0]);
+
+                            float maximo = encontrarMaximo(Datos5, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
 						
 						printf("\n");
 
@@ -3614,6 +3646,12 @@ int main()
 						break;
 					case 3:
 						printf("Has elegido obtener el valor mas alto.\n");
+						float Datos6[24]={28.766271,18.02613,27.904377,24.553476,24.916217,34.119217,40.565981,47.885346,71.402214,46.314807,30.058985,29.066882,34.446764,34.328002,38.861714,34.57236,42.307777,47.734021,79.729885,85.527648,84.422615,79.275334,47.409887,48.856536};
+						
+						longitud = sizeof(Datos6) / sizeof(Datos6[0]);
+
+                            float maximo = encontrarMaximo(Datos6, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
 						
 						printf("\n");
 
@@ -3977,6 +4015,12 @@ int main()
 						break;
 					case 3:
 						printf("Has elegido obtener el valor mas alto.\n");
+						float Datos7[24]={116.282053,104.960847,100.7582590,70.652976,62.41677,33.486942,66.134210,99.644190,113.210213,112.484255,115.109023,112.916219,117.429802,102.630663,114.410944,103.636366,86.849653,60.625902,73.213599,102.417012,110.953990,118.59882,93.771169,122.696654};
+						
+						longitud = sizeof(Datos7) / sizeof(Datos7[0]);
+
+                            float maximo = encontrarMaximo(Datos7, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
 						
 						printf("\n");
 
@@ -4339,6 +4383,13 @@ int main()
 						break;
 					case 3:
 						printf("Has elegido obtener el valor mas alto.\n");
+						float Datos8[24]={2729.183017,1544.065785,2151.091661,3384.471579,2444.871606,3658.878948,3718.134418,4047.368387,4943.197265,4407.05637,6317.636788,5154.143508,5898.394445,4671.261013,3873.203200,3146.865903,3713.639484,6478.937315,8460.459144,8082.027681,7704.900731,7066.859015,4672.406377,4368.592847};
+ 
+						
+						longitud = sizeof(Datos8) / sizeof(Datos8[0]);
+
+                            float maximo = encontrarMaximo(Datos8, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
 	
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -4697,6 +4748,12 @@ int main()
 						break;
 					case 3:
 						printf("Has elegido obtener el valor mas alto.\n");
+						float Datos9[24]={0.99317,1.226483,1.921443,0.835908,3.227077,3.002042,3.578217,2.663478,1.429314,1.853454,1.139789,1.227861,1.110916,1.482045,2.126322,1.752528,1.917174,2.44956,3.562943,3.517675,2.075094,1.350072,1.169409,0.367104};
+						
+						longitud = sizeof(Datos9) / sizeof(Datos9[0]);
+
+                            float maximo = encontrarMaximo(Datos9, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
 			
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -5057,6 +5114,13 @@ int main()
 						break;
 					case 3:
 						printf("Has elegido obtener el valor mas alto.\n");
+						float Datos10[24]={7101.249123,6294.982856,5606.818805,4095.800569,4785.695033,3684.170619,4284.090513,3747.238495,3234.274816,4359.563921,6421.739529,6910.032613,5414.777160,4712.962772,6528.440466,5655.806361,4687.64999,3807.180833,4566.002106,4258.846638,4191.189274,5099.919318,6682.534764,5570.282592};
+ 
+						
+						longitud = sizeof(Datos10) / sizeof(Datos10[0]);
+
+                            float maximo = encontrarMaximo(Datos10, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
 				
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -5417,6 +5481,13 @@ int main()
 						break;
 					case 3:
 						printf("Has elegido obtener el valor mas alto.\n");
+						float Datos11[24]={848.403074,973.686902,1688.757265,1665.571492,2388.831852,2325.571729,2617.534056,2395.8309,1927.916611,1777.274811,1347.957356,1023.70725,1569.291683,1693.011465,1455.368818,2581.307811,3380.729182,3215.923445,3381.156658,3239.672293,2693.50188,2005.321354,1533.099321,1115.958};           
+ 
+						
+						longitud = sizeof(Datos11) / sizeof(Datos11[0]);
+
+                            float maximo = encontrarMaximo(Datos11, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
 			
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -5779,6 +5850,12 @@ int main()
 						break;
 					case 3:
 						printf("Has elegido obtener el valor mas alto.\n");
+						float Datos12[24]={102.634029,138.181326,355.015427,266.787519,645.597457,655.361716,828.492494,661.445101,447.444657,328.182894,172.426246,103.956001,170.978835,208.192368,120.568373,412.77761,621.247495,534.185927,667.235783,619.95899,437.343279,166.240105,104.768426,59.778183};
+						
+						longitud = sizeof(Datos12) / sizeof(Datos12[0]);
+
+                            float maximo = encontrarMaximo(Datos12, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
 		              
 
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
@@ -6139,6 +6216,13 @@ int main()
 						break;
 					case 3:
 						printf("Has elegido obtener el valor mas alto.\n");
+						float Datos13[24]={390.590396,365.191889,359.459071,392.274795,390.931927,358.010046,352.713786,410.590237,396.278098,433.047494,434.361576,436.423907,428.663218,374.913003,423.887477,430.376969,397.335983,415.748786,409.345594,383.442347,341.437356,366.964524,364.536652,319.642072};
+ 
+						
+						longitud = sizeof(Datos13) / sizeof(Datos13[0]);
+
+                            float maximo = encontrarMaximo(Datos13, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
 
                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -6499,6 +6583,13 @@ int main()
 						break;
 					case 3:
 						printf("Has elegido obtener el valor mas alto.\n");
+						float Datos14[24]={2405.236806,1838.16573,2253.823616,2193.285205,2206.328862,2181.276794,2243.226356,2106.285519,2166.255198,2147.907197,2173.751719,2175.103528,2147.921609,2119.152721,2217.055737,1709.641446,1870.643862,1467.383492,1053.738199,779.410997,739.19081,1102.000335,1453.363695,1098.167328};
+
+						
+						longitud = sizeof(Datos14) / sizeof(Datos14[0]);
+
+                            float maximo = encontrarMaximo(Datos14, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
 			
 
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
@@ -6861,7 +6952,14 @@ int main()
 						break;
 					case 3:
 						printf("Has elegido obtener el valor mas alto.\n");
-			
+						float Datos15[24]={182.932089,172.740345,184.342436,178.093968,177.333071,198.273452,205.014809,212.202012,179.817184,187.508,179.26082,181.223116,169.946929,144.546715,183.995605,171.926116,170.585177,155.903954,181.020454,164.769537,139.776655,155.069311,127.558061,134.668015};
+ 
+						
+				longitud = sizeof(Datos15) / sizeof(Datos15[0]);
+
+                            float maximo = encontrarMaximo(Datos15, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
+						
 
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -7228,7 +7326,15 @@ int main()
                       
 						break;
 					case 3:
-						printf("Has elegido obtener el valor mas alto.\n");
+					printf("Has elegido obtener el valor mas alto.\n");
+					
+						
+                            float Datos16[24]={59.850282,69.065868,72.598535,74.357494,59.595065,79.50385,81.91575,81.751572,68.076048,68.765996,80.249832,82.210439,79.365292,72.930818,82.069251,72.848577,79.964147,76.946932,75.732520,65.48815,59.668639,71.884421,67.535659,73.273156};
+                            
+                             longitud = sizeof(Datos16) / sizeof(Datos16[0]);
+
+                            float maximo = encontrarMaximo(Datos16, longitud);
+                             printf("El valor máximo es: %.6f\n", maximo);
 						
 
 
