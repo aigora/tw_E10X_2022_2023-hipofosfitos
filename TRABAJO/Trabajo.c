@@ -7318,4 +7318,17 @@ void limpiarPantalla()
          //camb(&v[i], &v[min_idx]);
      //}
 //}
+void ordenar(int vector[], int dimension, int orden) {
+    int i, j, temp;
+    
+    for (i = 0; i < dimension - 1; i++) {
+        for (j = 0; j < dimension - i - 1; j++) {
+            if ((orden == 0 && vector[j] < vector[j + 1]) || (orden == 1 && vector[j] > vector[j + 1])) {
+                temp = vector[j];
+                vector[j] = vector[j + 1];
+                vector[j + 1] = temp;
+            }
+        }
+    }
+}
 
