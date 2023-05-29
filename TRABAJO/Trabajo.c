@@ -1649,8 +1649,28 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+			    int decision;
+                            int longitud = sizeof(hidraulica) / sizeof(hidraulica[0]);
+                            printf("1. Mayor a menor o 2. Menor a mayor");
+                            scanf("%i", &decision);
+                            if(decision==1)
+                            {
+                                qsort(hidraulica, longitud, sizeof(int), mayorAmenor); // Pon esto en los casos de ordenar de mayor a menor
+                                printList(hidraulica, longitud);
+                            printf("\n");
+                            }
+                            else if(decision==2)
+                            {
+                                qsort(hidraulica, longitud, sizeof(int), menorAmayor); // Pon esto en los casos de ordenar de menorr a mayor
+                                printList(hidraulica, longitud);
+                            printf("\n");
+                            }
+                            else
+                            {
+                                printf("Tecla incorrecta\n");
+                            }
 
-//Falta
+                            printf("\n");
 
                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -2002,7 +2022,28 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
-//Falta
+			    int decision;
+                            int longitud = sizeof(turbbomb) / sizeof(turbbomb[0]);
+                            printf("1. Mayor a menor o 2. Menor a mayor");
+                            scanf("%i", &decision);
+                            if(decision==1)
+                            {
+                                qsort(turbbomb, longitud, sizeof(int), mayorAmenor); // Pon esto en los casos de ordenar de mayor a menor
+                                printList(turbbomb, longitud);
+                            printf("\n");
+                            }
+                            else if(decision==2)
+                            {
+                                qsort(turbbomb, longitud, sizeof(int), menorAmayor); // Pon esto en los casos de ordenar de menorr a mayor
+                                printList(turbbomb, longitud);
+                            printf("\n");
+                            }
+                            else
+                            {
+                                printf("Tecla incorrecta\n");
+                            }
+
+                            printf("\n");
 
                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -2350,9 +2391,28 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+			    int decision;
+                            int longitud = sizeof(nuclear) / sizeof(nuclear[0]);
+                            printf("1. Mayor a menor o 2. Menor a mayor");
+                            scanf("%i", &decision);
+                            if(decision==1)
+                            {
+                                qsort(nuclear, longitud, sizeof(int), mayorAmenor); // Pon esto en los casos de ordenar de mayor a menor
+                                printList(nuclear, longitud);
+                            printf("\n");
+                            }
+                            else if(decision==2)
+                            {
+                                qsort(nuclear, longitud, sizeof(int), menorAmayor); // Pon esto en los casos de ordenar de menorr a mayor
+                                printList(nuclear, longitud);
+                            printf("\n");
+                            }
+                            else
+                            {
+                                printf("Tecla incorrecta\n");
+                            }
 
-
-//Falta
+                            printf("\n");
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
 
@@ -2701,9 +2761,28 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+			    int decision;
+                            int longitud = sizeof(carbon) / sizeof(carbon[0]);
+                            printf("1. Mayor a menor o 2. Menor a mayor");
+                            scanf("%i", &decision);
+                            if(decision==1)
+                            {
+                                qsort(carbon, longitud, sizeof(int), mayorAmenor); // Pon esto en los casos de ordenar de mayor a menor
+                                printList(carbon, longitud);
+                            printf("\n");
+                            }
+                            else if(decision==2)
+                            {
+                                qsort(carbon, longitud, sizeof(int), menorAmayor); // Pon esto en los casos de ordenar de menorr a mayor
+                                printList(carbon, longitud);
+                            printf("\n");
+                            }
+                            else
+                            {
+                                printf("Tecla incorrecta\n");
+                            }
 
-
-//Falta
+                            printf("\n");
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
 
@@ -3052,8 +3131,28 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+			    int decision;
+                            int longitud = sizeof(motordiesel) / sizeof(motordiesel[0]);
+                            printf("1. Mayor a menor o 2. Menor a mayor");
+                            scanf("%i", &decision);
+                            if(decision==1)
+                            {
+                                qsort(motordiesel, longitud, sizeof(int), mayorAmenor); // Pon esto en los casos de ordenar de mayor a menor
+                                printList(motordiesel, longitud);
+                            printf("\n");
+                            }
+                            else if(decision==2)
+                            {
+                                qsort(motordiesel, longitud, sizeof(int), menorAmayor); // Pon esto en los casos de ordenar de menorr a mayor
+                                printList(motordiesel, longitud);
+                            printf("\n");
+                            }
+                            else
+                            {
+                                printf("Tecla incorrecta\n");
+                            }
 
-//Falta
+                            printf("\n");
 
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -3400,8 +3499,28 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
-                        
-              //Falta          
+			    int decision;
+                            int longitud = sizeof(turbgas) / sizeof(turbgas[0]);
+                            printf("1. Mayor a menor o 2. Menor a mayor");
+                            scanf("%i", &decision);
+                            if(decision==1)
+                            {
+                                qsort(turbgas, longitud, sizeof(int), mayorAmenor); // Pon esto en los casos de ordenar de mayor a menor
+                                printList(turbgas, longitud);
+                            printf("\n");
+                            }
+                            else if(decision==2)
+                            {
+                                qsort(turbgas, longitud, sizeof(int), menorAmayor); // Pon esto en los casos de ordenar de menorr a mayor
+                                printList(turbgas, longitud);
+                            printf("\n");
+                            }
+                            else
+                            {
+                                printf("Tecla incorrecta\n");
+                            }
+
+                            printf("\n");
                         
                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -3749,8 +3868,28 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
-                        
-              //Falta          
+			    int decision;
+                            int longitud = sizeof(turbvapor) / sizeof(turbvapor[0]);
+                            printf("1. Mayor a menor o 2. Menor a mayor");
+                            scanf("%i", &decision);
+                            if(decision==1)
+                            {
+                                qsort(turbvapor, longitud, sizeof(int), mayorAmenor); // Pon esto en los casos de ordenar de mayor a menor
+                                printList(turbvapor, longitud);
+                            printf("\n");
+                            }
+                            else if(decision==2)
+                            {
+                                qsort(turbvapor, longitud, sizeof(int), menorAmayor); // Pon esto en los casos de ordenar de menorr a mayor
+                                printList(turbvapor, longitud);
+                            printf("\n");
+                            }
+                            else
+                            {
+                                printf("Tecla incorrecta\n");
+                            }
+
+                            printf("\n");
                         
                         printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
@@ -4097,8 +4236,28 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+			    int decision;
+                            int longitud = sizeof(ciclocomb) / sizeof(ciclocomb[0]);
+                            printf("1. Mayor a menor o 2. Menor a mayor");
+                            scanf("%i", &decision);
+                            if(decision==1)
+                            {
+                                qsort(ciclocomb, longitud, sizeof(int), mayorAmenor); // Pon esto en los casos de ordenar de mayor a menor
+                                printList(ciclocomb, longitud);
+                            printf("\n");
+                            }
+                            else if(decision==2)
+                            {
+                                qsort(ciclocomb, longitud, sizeof(int), menorAmayor); // Pon esto en los casos de ordenar de menorr a mayor
+                                printList(ciclocomb, longitud);
+                            printf("\n");
+                            }
+                            else
+                            {
+                                printf("Tecla incorrecta\n");
+                            }
 
-//Falta
+                            printf("\n");
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
 
@@ -4444,8 +4603,28 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+			    int decision;
+                            int longitud = sizeof(hidroeolica) / sizeof(hidroeolica[0]);
+                            printf("1. Mayor a menor o 2. Menor a mayor");
+                            scanf("%i", &decision);
+                            if(decision==1)
+                            {
+                                qsort(hidroeolica, longitud, sizeof(int), mayorAmenor); // Pon esto en los casos de ordenar de mayor a menor
+                                printList(hidroeolica, longitud);
+                            printf("\n");
+                            }
+                            else if(decision==2)
+                            {
+                                qsort(hidroeolica, longitud, sizeof(int), menorAmayor); // Pon esto en los casos de ordenar de menorr a mayor
+                                printList(hidroeolica, longitud);
+                            printf("\n");
+                            }
+                            else
+                            {
+                                printf("Tecla incorrecta\n");
+                            }
 
-//Falta
+                            printf("\n");
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
 
@@ -4791,9 +4970,28 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+			    int decision;
+                            int longitud = sizeof(eolica) / sizeof(eolica[0]);
+                            printf("1. Mayor a menor o 2. Menor a mayor");
+                            scanf("%i", &decision);
+                            if(decision==1)
+                            {
+                                qsort(eolica, longitud, sizeof(int), mayorAmenor); // Pon esto en los casos de ordenar de mayor a menor
+                                printList(eolica, longitud);
+                            printf("\n");
+                            }
+                            else if(decision==2)
+                            {
+                                qsort(eolica, longitud, sizeof(int), menorAmayor); // Pon esto en los casos de ordenar de menorr a mayor
+                                printList(eolica, longitud);
+                            printf("\n");
+                            }
+                            else
+                            {
+                                printf("Tecla incorrecta\n");
+                            }
 
-
-//Falta
+                            printf("\n");
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
 
@@ -5141,8 +5339,28 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+			    int decision;
+                            int longitud = sizeof(solarfoto) / sizeof(solarfoto[0]);
+                            printf("1. Mayor a menor o 2. Menor a mayor");
+                            scanf("%i", &decision);
+                            if(decision==1)
+                            {
+                                qsort(solarfoto, longitud, sizeof(int), mayorAmenor); // Pon esto en los casos de ordenar de mayor a menor
+                                printList(solarfoto, longitud);
+                            printf("\n");
+                            }
+                            else if(decision==2)
+                            {
+                                qsort(solarfoto, longitud, sizeof(int), menorAmayor); // Pon esto en los casos de ordenar de menorr a mayor
+                                printList(solarfoto, longitud);
+                            printf("\n");
+                            }
+                            else
+                            {
+                                printf("Tecla incorrecta\n");
+                            }
 
-//Falta
+                            printf("\n");
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
 
@@ -5488,9 +5706,29 @@ int main()
 				switch(tipo)
 				{
 					case 1:
-						printf("Has elegido ordenar los datos.\n");
+						printf("Has elegido ordenar los datos.\n);
+			    int decision;
+                            int longitud = sizeof(solartermica) / sizeof(solartermica[0]);
+                            printf("1. Mayor a menor o 2. Menor a mayor");
+                            scanf("%i", &decision);
+                            if(decision==1)
+                            {
+                                qsort(solartermica, longitud, sizeof(int), mayorAmenor); // Pon esto en los casos de ordenar de mayor a menor
+                                printList(solartermica, longitud);
+                            printf("\n");
+                            }
+                            else if(decision==2)
+                            {
+                                qsort(solartermica, longitud, sizeof(int), menorAmayor); // Pon esto en los casos de ordenar de menorr a mayor
+                                printList(solartermica, longitud);
+                            printf("\n");
+                            }
+                            else
+                            {
+                                printf("Tecla incorrecta\n");
+                            }
 
-//Falta
+                            printf("\n");
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
 
@@ -5840,9 +6078,28 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+			    int decision;
+                            int longitud = sizeof(otrasrenovables) / sizeof(otrasrenovables[0]);
+                            printf("1. Mayor a menor o 2. Menor a mayor");
+                            scanf("%i", &decision);
+                            if(decision==1)
+                            {
+                                qsort(otrasrenovables, longitud, sizeof(int), mayorAmenor); // Pon esto en los casos de ordenar de mayor a menor
+                                printList(otrasrenovables, longitud);
+                            printf("\n");
+                            }
+                            else if(decision==2)
+                            {
+                                qsort(otrasrenovables, longitud, sizeof(int), menorAmayor); // Pon esto en los casos de ordenar de menorr a mayor
+                                printList(otrasrenovables, longitud);
+                            printf("\n");
+                            }
+                            else
+                            {
+                                printf("Tecla incorrecta\n");
+                            }
 
-      //Falta                  
-
+                            printf("\n");
                      printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
 
@@ -6188,8 +6445,28 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+	                    int decision;
+                            int longitud = sizeof(cogeneracion) / sizeof(cogeneracion[0]);
+                            printf("1. Mayor a menor o 2. Menor a mayor");
+                            scanf("%i", &decision);
+                            if(decision==1)
+                            {
+                                qsort(cogeneracion, longitud, sizeof(int), mayorAmenor); // Pon esto en los casos de ordenar de mayor a menor
+                                printList(cogeneracion, longitud);
+                            printf("\n");
+                            }
+                            else if(decision==2)
+                            {
+                                qsort(cogeneracion, longitud, sizeof(int), menorAmayor); // Pon esto en los casos de ordenar de menorr a mayor
+                                printList(cogeneracion, longitud);
+                            printf("\n");
+                            }
+                            else
+                            {
+                                printf("Tecla incorrecta\n");
+                            }
 
-//Falta          
+                            printf("\n");
                          printf("Presiona la tecla 'w' y luego Enter para borrar la pantalla.\n");
                         scanf(" %s", elige);
 
@@ -6535,6 +6812,28 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+			    int decision;
+                            int longitud = sizeof(residuosnore) / sizeof(residuosnore[0]);
+                            printf("1. Mayor a menor o 2. Menor a mayor");
+                            scanf("%i", &decision);
+                            if(decision==1)
+                            {
+                                qsort(residuosnore, longitud, sizeof(int), mayorAmenor); // Pon esto en los casos de ordenar de mayor a menor
+                                printList(residuosnore, longitud);
+                            printf("\n");
+                            }
+                            else if(decision==2)
+                            {
+                                qsort(residuosnore, longitud, sizeof(int), menorAmayor); // Pon esto en los casos de ordenar de menorr a mayor
+                                printList(residuosnore, longitud);
+                            printf("\n");
+                            }
+                            else
+                            {
+                                printf("Tecla incorrecta\n");
+                            }
+
+                            printf("\n");
 
 //Falta
 
@@ -6887,6 +7186,28 @@ int main()
 				{
 					case 1:
 						printf("Has elegido ordenar los datos.\n");
+			    int decision;
+                            int longitud = sizeof(residuosre) / sizeof(residuosre[0]);
+                            printf("1. Mayor a menor o 2. Menor a mayor");
+                            scanf("%i", &decision);
+                            if(decision==1)
+                            {
+                                qsort(residuosre, longitud, sizeof(int), mayorAmenor); // Pon esto en los casos de ordenar de mayor a menor
+                                printList(residuosre, longitud);
+                            printf("\n");
+                            }
+                            else if(decision==2)
+                            {
+                                qsort(residuosre, longitud, sizeof(int), menorAmayor); // Pon esto en los casos de ordenar de menorr a mayor
+                                printList(residuosre, longitud);
+                            printf("\n");
+                            }
+                            else
+                            {
+                                printf("Tecla incorrecta\n");
+                            }
+
+                            printf("\n");
 //Falta
 
 
