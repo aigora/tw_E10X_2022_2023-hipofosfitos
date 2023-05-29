@@ -19,5 +19,5 @@ Sergio Díaz Gegundez        || serdige
 
 - Te permite la lectura de los datos.
 - Te calcula estadisticas.
-- Te proporciona que los datos se mezclen.
+- Te proporciona el dato con valor mas alto.
 - Te ordena los datos segun tus criterios.
