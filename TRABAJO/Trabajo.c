@@ -6850,6 +6850,28 @@ int main()
             			{
                 			case 1:
                 			printf("Has elegido ordenar los datos.\n");
+				        float gentot[24]={24305.47495,21134.389784,22097.189386,19900.364428,20471.481075,19863.791971,22436.768607,21585.235814,20688.868220,20634.64191,23017.698420,23875.280879,24302.335181,21120.725026,22758.010234,21751.098819,22084.406638,23242.456503,26409.488103,25284.741791,23658.546898,21941.569779,21564.342557,22197.577015};
+    int i, orden;
+    
+
+    // Pedir al usuario que elija el orden de clasificación
+    printf("Elige el orden de clasificación:\n");
+    printf("0 - Mayor a menor\n");
+    printf("1 - Menor a mayor\n");
+    printf("Opción: ");
+    scanf("%d", &orden);
+    
+    // Ordenar el vector según la elección del usuario
+    ordenarVector(vector, orden);
+    
+    // Imprimir el vector ordenado
+    printf("\n datos ordenados:\n");
+    for (i = 0; i < 24; i++) {
+        printf("%d ", vector[i]);
+    }
+    
+    return 0;
+}
 
 //Falta
 
@@ -7319,7 +7341,7 @@ void limpiarPantalla()
          //camb(&v[i], &v[min_idx]);
      //}
 //}
-void ordenarVector(int vector[], int orden) {
+void ordenarVector(float vector[], int orden) {
     int i, j, temp;
     
     for (i = 0; i < 24 - 1; i++) {
