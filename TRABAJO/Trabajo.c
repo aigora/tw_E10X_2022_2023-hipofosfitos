@@ -1597,8 +1597,10 @@ int main()
 
     char elige[10], elige2[10], elige3[10];
     int reiniciar = 1;
+    int cerrar = 0;
 
- while(1)
+
+ while(reiniciar)
    {
 
 	printf("Bienvenido al sistema.\n");
@@ -1663,7 +1665,10 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                            reiniciar = 0;
+                            cerrar = 1;
                             break;
+                            
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
                         {
@@ -1673,27 +1678,29 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                            reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
                         else
                         {
                         printf("Tecla incorrecta. Intenta de nuevo.\n");
-                        }
-                
-                        break;
-
+                    
                          printf("¿Deseas reiniciar el programa (r) o cerrarlo (c)? ");
                          scanf(" %s", elige3);
 
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar = 1;
                         }
                         else
-                             {
+                        {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar = 0;
+                        }
                         }
                        
 						break;
@@ -1722,6 +1729,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                            reiniciar = 0;
+                            cerrar=1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -1732,13 +1741,15 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                            reiniciar =0;
+                            cerrar=1;
                             break;
                         }
                          }
                         else
                         {
                         printf("Tecla incorrecta. Intenta de nuevo.\n");
-                        }
+                        
                 
                         break;                
 
@@ -1748,13 +1759,16 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                         break;
+                        }
                         
 					case 3:
 						printf("Has elegido mezclar los datos.\n");
@@ -1779,6 +1793,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                            reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -1789,6 +1805,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -1804,12 +1822,14 @@ int main()
 
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
-                        reiniciar = 0;
+                         reiniciar = 0;
+                            cerrar = 1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                         break;
 
@@ -1918,6 +1938,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -1928,6 +1950,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -1943,12 +1967,14 @@ int main()
 
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
-                        reiniciar = 0;
+                         reiniciar = 0;
+                            cerrar = 1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       break;
 			}
@@ -1991,6 +2017,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -2001,6 +2029,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -2016,12 +2046,14 @@ int main()
 
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
-                        reiniciar = 0;
+                         reiniciar = 0;
+                            cerrar = 1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -2050,6 +2082,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -2060,6 +2094,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -2076,11 +2112,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -2089,7 +2127,8 @@ int main()
 						//float turbbomb[24]={320.531389,401.293218,330.794555,153.67968,238.708927,105.706304,115.895307,159.688964,118.198104,232.112394,202.806598,269.908819,215.637741,285.079947,273.848152,336.712619,299.880038,270.92393,216.617594,339.372152,304.810326,385.661431,361.663867,485.359059};
 						mezclar(turbbomb, 24);
 			    			printf("Datos mezclados: ");
-     						for (int i = 0; i < 24; i++) {
+     						for (int i = 0; i < 24; i++) 
+                            {
          					printf("%f ", turbbomb[i]);
 						}
 						printf("\n");
@@ -2108,6 +2147,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -2118,6 +2159,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -2134,11 +2177,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -2244,6 +2289,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -2254,6 +2301,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -2270,11 +2319,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       break;
 			}
@@ -2315,6 +2366,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -2325,6 +2378,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -2341,11 +2396,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -2374,6 +2431,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -2384,6 +2443,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -2400,11 +2461,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -2433,6 +2496,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -2443,6 +2508,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -2459,11 +2526,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -2569,6 +2638,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -2579,6 +2650,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -2595,11 +2668,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       break;
 
@@ -2642,6 +2717,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -2652,6 +2729,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -2668,11 +2747,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -2701,6 +2782,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -2711,6 +2794,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -2727,11 +2812,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -2760,6 +2847,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -2770,6 +2859,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -2786,11 +2877,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                                               
 						break;
@@ -2898,6 +2991,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -2908,6 +3003,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -2924,11 +3021,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       break;
 			}
@@ -2969,6 +3068,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -2979,6 +3080,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -2995,11 +3098,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -3028,6 +3133,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -3038,6 +3145,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -3054,11 +3163,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -3086,6 +3197,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -3096,6 +3209,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -3112,11 +3227,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -3222,6 +3339,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -3232,6 +3351,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -3248,11 +3369,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       break;
 			}
@@ -3293,6 +3416,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -3303,6 +3428,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -3319,11 +3446,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -3353,6 +3482,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -3363,6 +3494,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -3379,11 +3512,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar = 0;
                         }
                       
 						break;
@@ -3411,6 +3546,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -3421,6 +3558,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -3437,11 +3576,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -3547,6 +3688,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -3557,6 +3700,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -3573,11 +3718,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar = 1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       break;
 			}
@@ -3618,6 +3765,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -3628,6 +3777,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -3644,11 +3795,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -3677,6 +3830,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -3687,6 +3842,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -3703,11 +3860,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -3736,6 +3895,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -3746,6 +3907,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -3762,11 +3925,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -3871,6 +4036,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -3881,6 +4048,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -3897,11 +4066,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar= 1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       break;
 			}
@@ -3941,6 +4112,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -3951,6 +4124,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -3967,11 +4142,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -4001,6 +4178,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -4011,6 +4190,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -4027,11 +4208,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -4059,6 +4242,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -4069,6 +4254,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -4085,11 +4272,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -4194,6 +4383,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -4204,6 +4395,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -4220,11 +4413,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       break;
 			}
@@ -4264,6 +4459,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -4274,6 +4471,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -4290,11 +4489,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -4322,6 +4523,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -4332,6 +4535,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -4348,11 +4553,14 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
+                    
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar =0;
                         }
                       
 						break;
@@ -4380,6 +4588,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -4390,6 +4600,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -4406,11 +4618,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
@@ -4516,6 +4730,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -4526,6 +4742,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -4542,11 +4760,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       break;
 			}
@@ -4587,6 +4807,8 @@ int main()
 
                         if (elige2[0] == 'c' || elige2[0] == 'C')
                         {
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                         else if (elige2[0] == 'i' || elige2[0] == 'I')
@@ -4597,6 +4819,8 @@ int main()
                         else
                         {
                             printf("Opción inválida. Saliendo del programa.\n");
+                             reiniciar = 0;
+                            cerrar = 1;
                             break;
                         }
                          }
@@ -4613,11 +4837,13 @@ int main()
                          if (elige3[0] != 'r' && elige3[0] != 'R')
                         {
                         reiniciar = 0;
+                        cerrar=1;
                         }
                         else
                              {
                          limpiarPantalla();
                          reiniciar = 1;
+                         cerrar=0;
                         }
                       
 						break;
