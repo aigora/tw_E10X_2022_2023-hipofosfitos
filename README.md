@@ -17,7 +17,7 @@ Sergio Díaz Gegundez        || serdige
 
 ## Objetivos del trabajo
 
-- Te permite la lectura de los datos.
-- Te calcula estadisticas.
-- Te proporciona el dato con valor mas alto.
-- Te ordena los datos segun tus criterios.
+- Te permite conocer los maximos de cada año.
+- Te calcula la media.
+- Te proporciona los datos ordenados alfabeticamente.
+- Te ordena los datos de mayor a menor.
