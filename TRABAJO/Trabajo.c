@@ -73,7 +73,49 @@ int main(int argc, char *argv[])
     } 
     while(!feof(fichero));
     fclose(fichero);
-return 0;
+    int opcion;
+
+    do 
+    {
+        printf("Bienvenido al sistema.\n");
+	    printf("Disponemos de los datos de generacion de:\n");
+        printf("\n");
+        printf("1. Datos máximos por año\n");
+        printf("2. Alfabéticamente por tecnología\n");
+        printf("3. Ordenado de mayor a menor\n");
+        printf("4. Calcular media por año\n");
+        printf("0. Salir\n");
+        printf("\n");
+        printf("Seleccione una opción:\n");
+
+
+        scanf("%d", &opcion);
+
+        switch (opcion) 
+        {
+            case 1:
+                imprimirDatosMaximoPorAnio(lineas, NUMERO_TECNOLOGIAS);
+                break;
+            case 2:
+                imprimirAlfabeticamentePorTecnologia(lineas, NUMERO_TECNOLOGIAS);
+                break;
+            case 3:
+                imprimirOrdenadoDeMayorAMenor(lineas, NUMERO_TECNOLOGIAS);
+                break;
+            case 4:
+                calcularMediaPorAnio(lineas, NUMERO_TECNOLOGIAS);
+                break;
+            case 0:
+                printf("Saliendo del programa...\n");
+                break;
+            default:
+                printf("Opción no válida. Intente de nuevo.\n");
+                break;
+        }
+    } 
+    while (opcion != 0);
+
+	return 0;
 }
 
 //Funciones:
