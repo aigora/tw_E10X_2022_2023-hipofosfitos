@@ -17,6 +17,10 @@ void identificarse();
 void imprimirDatosMaximoPorAnio(LineaFichero* lineas, int numLineas);
 void ordenarAlfabeticamentePorTecnologia(LineaFichero* lineas, int numLineas);
 void imprimirAlfabeticamentePorTecnologia(LineaFichero* lineas, int numLineas);
+void ordenarDeMayorAMenor(LineaFichero* lineas, int numLineas);
+void calcularMediaPorAnio(LineaFichero* lineas, int numLineas);
+void imprimirOrdenadoDeMayorAMenor(LineaFichero* lineas, int numLineas);
+
 
 
 int main(int argc, char *argv[]) 
@@ -241,4 +245,115 @@ void imprimirAlfabeticamentePorTecnologia(LineaFichero* lineas, int numLineas)
 
     fclose(archivo);
     printf("Los datos ordenados alfabéticamente por tecnología han sido volcados en el archivo 'orden_alfabetico_por_tecnologia.txt'.\n");
+}
+
+void ordenarDeMayorAMenor(LineaFichero* lineas, int numLineas) 
+{
+    for (int i = 0; i < numLineas - 1; i++) 
+    {
+        for (int j = 0; j < numLineas - i - 1; j++) 
+        {
+            double sumaA = 0.0;
+            double sumaB = 0.0;
+
+            for (int k = 0; k < 12; k++) 
+            {
+                sumaA += lineas[j].valores2021[k];
+                sumaB += lineas[j + 1].valores2021[k];
+            }
+
+            if (sumaA < sumaB) 
+            {
+                LineaFichero temp = lineas[j];
+                lineas[j] = lineas[j + 1];
+                lineas[j + 1] = temp;
+            }
+        }
+    }
+}
+
+void imprimirOrdenadoDeMayorAMenor(LineaFichero* lineas, int numLineas) 
+{
+    ordenarDeMayorAMenor(lineas, numLineas);
+
+    FILE* archivo = fopen("orden_mayor_a_menor.txt", "w");
+    if (archivo == NULL) {
+        printf("Error al abrir el archivo para escribir.\n");
+        return;
+    }
+
+    for (int i = 0; i < numLineas; i++) 
+    {
+        fprintf(archivo, "%s %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf\n",
+            lineas[i].tecnologia,
+            lineas[i].valores2021[0], 
+            lineas[i].valores2021[1],
+            lineas[i].valores2021[2],
+            lineas[i].valores2021[3],
+            lineas[i].valores2021[4],
+            lineas[i].valores2021[5],
+            lineas[i].valores2021[6],
+            lineas[i].valores2021[7],
+            lineas[i].valores2021[8],
+            lineas[i].valores2021[9],
+            lineas[i].valores2021[10],
+            lineas[i].valores2021[11],
+            lineas[i].valores2022[0], 
+            lineas[i].valores2022[1],
+            lineas[i].valores2022[2],
+            lineas[i].valores2022[3],
+            lineas[i].valores2022[4],
+            lineas[i].valores2022[5],
+            lineas[i].valores2022[6],
+            lineas[i].valores2022[7],
+            lineas[i].valores2022[8],
+            lineas[i].valores2022[9],
+            lineas[i].valores2022[10],
+            lineas[i].valores2022[11]);
+    }
+
+    fclose(archivo);
+    printf("Los datos han sido ordenados de mayor a menor y volcados en el archivo 'orden_mayor_a_menor.txt'.\n");
+}
+
+void calcularMediaPorAnio(LineaFichero* lineas, int numLineas) 
+{
+    FILE* archivo = fopen("media_por_anio.txt", "w");
+    if (archivo == NULL) {
+        printf("Error al abrir el archivo para escribir.\n");
+        return;
+    }
+
+    for (int i = 0; i < 12; i++) 
+    {
+        double suma = 0.0;
+        double media;
+
+        for (int j = 0; j < numLineas; j++) 
+        {
+            suma += lineas[j].valores2021[i];
+        }
+
+        media = suma / numLineas;
+
+        fprintf(archivo, "Año 2021 - Mes %d: Media: %lf\n", i + 1, media);
+    }
+
+    for (int i = 0; i < 12; i++) 
+    {
+        double suma = 0.0;
+        double media;
+
+        for (int j = 0; j < numLineas; j++) 
+        {
+            suma += lineas[j].valores2022[i];
+        }
+
+        media = suma / numLineas;
+
+        fprintf(archivo, "Año 2022 - Mes %d: Media: %lf\n", i + 1, media);
+    }
+
+    fclose(archivo);
+    printf("Las medias por año han sido volcadas en el archivo 'media_por_anio.txt'.\n");
 }
